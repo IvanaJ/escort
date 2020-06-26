@@ -1,0 +1,173 @@
+/* --------------------------------------------------------
+Style Sheet for Escort
+
+date: 2020
+author: Ivana J. - Digital Orange <jakimovska@gwcworld.com>
+----------------------------------------------------------*/
+@import "partials/helpers";
+@import "partials/colors";
+@import "partials/header";
+@import "partials/gallery";
+@import "partials/footer";
+@import "partials/filter";
+@import "partials/form-elements";
+
+html {
+  overflow-x: hidden;
+}
+
+body {
+  position: relative;
+  padding: 0 !important;
+  margin: 0 auto;
+  min-height: 600px;
+  background: $white;
+  font-family: "Jost" !important;
+  color: $white;
+  font-weight: 300;
+  font-size: 1rem;
+  line-height: 1.4;
+  letter-spacing: 0.5px;
+  text-rendering: optimizeLegibility;
+  font-smoothing: antialiased;
+  -moz-font-smoothing: antialiased;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+  @include flex(initial, initial, initial, column, nowrap);
+}
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+*:focus {
+  outline: none;
+}
+
+button {
+  &:focus {
+    outline: none;
+  }
+}
+a {
+  color: $white;
+  text-decoration: none;
+  &:hover,
+  &:focus {
+    color: $white;
+  }
+}
+
+img {
+  -webkit-user-drag: none;
+  -khtml-user-drag: none;
+  -moz-user-drag: none;
+  -o-user-drag: none;
+  user-drag: none;
+}
+
+h1 {
+  &.do-grey-title {
+    line-height: 2.375rem;
+    font-size: 2.875rem;
+    font-weight: 700;
+    text-align: center;
+  }
+}
+hr {
+  border-top: 4px solid $darkgrey;
+  border-radius: 25px;
+  margin: 1rem 5rem;
+}
+// Buttons
+.btn {
+  &:hover {
+    opacity: 0.9;
+  }
+  &.btn-white {
+    background: $white;
+    color: $pink;
+    font-weight: 700;
+    min-width: 155px;
+    border-radius: 25px;
+    line-height: 2.375rem;
+  }
+  &.btn-pink {
+    background: $p;
+    color: $white;
+    font-weight: 700;
+    width: 155px;
+    border-radius: 25px;
+    line-height: 2.375rem;
+  }
+  &.btn-grey-outline {
+    width: 215px;
+    background: $white;
+    color: $grey;
+    font-weight: 700;
+    border-radius: 25px;
+    line-height: 2.375rem;
+    border: 2px solid $lightgrey;
+  }
+}
+
+.do-banner {
+  background: url("../images/banner.png") no-repeat;
+  background-size: cover;
+  background-color: $p;
+  background-position: center;
+  width: 100%;
+  text-align: center;
+
+  div {
+    padding: 3.3rem 0;
+    h1 {
+      font-size: 36px;
+      font-weight: 700;
+    }
+    p {
+      font-size: 24px;
+    }
+  }
+}
+// Register Page
+.do-register {
+  margin: 3rem 0;
+  h1 {
+    text-align: center;
+  }
+  &-btn {
+    button {
+      margin: 0 auto;
+    }
+  }
+  .do-conditions {
+    font-weight: 300;
+    font-style: italic;
+    font-size: 1.0625rem;
+    line-height: 2.375rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1760px;
+  }
+}
+
+@media (max-width: 1024px) {
+  h1 {
+    &.do-grey-title {
+      font-size: 2.25rem;
+    }
+  }
+}
+@media (max-width: 768px) {
+  main {
+    margin-top: 1.5rem;
+  }
+}

@@ -1,0 +1,206 @@
+// Forms
+form {
+    color: $grey;
+    font-weight: 700;
+    input{
+        @include input_placeholder($white, 300, 17px, none, 1, 1, italic);
+    }
+    label {
+        font-size: 1.5rem;
+        font-weight: 700;
+        line-height: 2.375rem;
+        a{
+            color: $pink;
+            text-decoration: underline;
+        }
+    }
+    small{
+        font-weight: 300;
+        font-style: italic;
+        font-size: 1.0625rem;
+        a{
+            color: $pink;
+            text-decoration: underline;
+        }
+    }
+    .form-group {
+        .form-control,
+        .custom-select {
+            height: 50px;
+            border-radius: 1.5625rem;
+            border: 2px solid $lightgrey;
+            color: $grey;
+            font-weight: 700;
+            font-size: 1.25rem;
+        }
+        .custom-select {
+            background: #fff url("../images/arrow.svg") no-repeat right 1.3rem center/16px 10px;
+        }
+        .custom-control {
+            padding: 0;
+            //    Radio buttons
+        .custom-control-label {
+            width: 155px;
+            height: 50px;
+            left: 0;
+            &:before {
+                width: 155px;
+                height: 50px;
+                border-radius: 1.5625rem;
+                left: 0;
+                border: 2px solid $lightgrey;
+            }
+            &::after {
+                content: attr(category);
+                position: absolute;
+                color: $grey;
+                top: 60% !important;
+                
+                @include abs-center();
+                font-size: 1rem;
+                font-weight: 700;
+                width: auto;
+                height: auto;
+                background-image: unset !important;
+            }
+            &:hover {
+                opacity: 0.7;
+            }
+        }
+        .custom-control-input {
+            &:checked ~ .custom-control-label {
+                &::before {
+                    border-color: $lightgrey;
+                    background-color: $grey;
+                }
+                &::after {
+                    color: $white;
+                }
+            }
+        }
+            
+        }
+        
+       
+    }
+    .do-check{
+        .custom-checkbox {
+            .custom-control-label{
+                &::before{
+                    border-radius: unset;
+                    border:1px solid $darkgrey;
+                    top: 0.7rem;
+                }
+            }
+            .custom-control-input{
+                top: 0.7rem;
+                &:checked ~ .custom-control-label {
+                    &::before {
+                        border-color: $lightgrey ;
+                        background-color: $grey ;
+                        top: 0.7rem;
+                   
+                    }
+                    &::after{
+                        top: 0.7rem;
+                    }
+                   
+                }
+                
+            }
+        }
+       
+        
+    }
+}
+
+// Range
+.do-range {
+    width: 80%;
+    &.ui-widget {
+        margin-top: 1.5rem;
+        &.ui-widget-content {
+            border: 1px solid $lightgrey;
+        }
+        &.ui-slider-horizontal {
+            height: 0.1rem;
+            .custom-handle-from,
+            .custom-handle-to {
+                width: 2.2em;
+                height: 2.2em;
+                top: 50%;
+                margin-top: -1em;
+                text-align: center;
+                line-height: 1.6em;
+            }
+            .do-handle-value {
+                margin-top: 2.5rem;
+                font-size: 1rem;
+                font-weight: 700;
+                width: 70px;
+            }
+        }
+        &.ui-widget-content {
+            .ui-state-default {
+                border: 3px solid $pink;
+                background: $white;
+                border-radius: 1.5625rem;
+                .do-handle-value {
+                    color: $grey;
+                }
+            }
+        }
+    }
+}
+// Location input
+.do-location-wrap {
+    &::before {
+        content: "";
+        position: absolute;
+        background: url("../images/location.svg") no-repeat;
+        background-size: contain;
+        width: 30px;
+        height: 30px;
+        right: 2rem;
+        top: 3.5rem;
+    }
+}
+
+@media (max-width:1440px){
+    form {
+
+        .form-group {
+            .custom-control{
+                padding: 0 0.2rem;
+            }
+        }
+    }
+    
+}
+@media (max-width: 768px) {
+    form {
+        label {
+            font-size: 1.25rem;
+        }
+      
+    }
+}
+
+
+@media (max-width: 425px) {
+    form {
+
+        .form-group {
+            .custom-control{
+                padding: 0 0.1rem;
+                margin: 1rem 0;
+            }
+            .custom-control-label{
+                width: 125px;
+                &:before{
+                    width: 125px;
+                }
+            }
+        }
+    }
+}

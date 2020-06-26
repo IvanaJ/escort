@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="35" height="31" viewBox="0 0 35 31">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Rectangle_463" data-name="Rectangle 463" width="35" height="31" transform="translate(-1.5 -2.283)" fill="none"/>
+    </clipPath>
+  </defs>
+  <g id="Vector_Smart_Object" data-name="Vector Smart Object" transform="translate(1.5 1.783)">
+    <g id="Group_802" data-name="Group 802" transform="translate(0 0.5)">
+      <g id="Group_801" data-name="Group 801" clip-path="url(#clip-path)">
+        <path id="Path_682" data-name="Path 682" d="M30.412,4.733H1A1.016,1.016,0,0,0,1,6.765H30.412a1.016,1.016,0,0,0,0-2.031" transform="translate(0 -2.05)" fill="#5c5c5c"/>
+        <path id="Path_683" data-name="Path 683" d="M30.412,17.462H1a1.016,1.016,0,0,0,0,2.031H30.412a1.016,1.016,0,0,0,0-2.031" transform="translate(0 -5.691)" fill="#5c5c5c"/>
+        <path id="Path_684" data-name="Path 684" d="M30.412,30.192H1a1.016,1.016,0,0,0,0,2.031H30.412a1.016,1.016,0,0,0,0-2.031" transform="translate(0 -9.332)" fill="#5c5c5c"/>
+        <path id="Path_685" data-name="Path 685" d="M16.32,4.653a3.8,3.8,0,1,1-7.606,0,3.8,3.8,0,1,1,7.606,0" transform="translate(-2.493 -0.925)" fill="#fff"/>
+        <path id="Path_686" data-name="Path 686" d="M16.32,4.653a3.8,3.8,0,1,1-7.606,0,3.8,3.8,0,1,1,7.606,0Z" transform="translate(-2.493 -0.925)" fill="#ef2f7f" stroke="#fff" stroke-miterlimit="10" stroke-width="1.59"/>
+        <path id="Path_687" data-name="Path 687" d="M16.32,30.26a3.8,3.8,0,1,1-3.8-3.853,3.828,3.828,0,0,1,3.8,3.853" transform="translate(-2.493 -8.249)" fill="#ef2f7f" stroke="#fff" stroke-width="1"/>
+        <path id="Path_689" data-name="Path 689" d="M33.523,17.223a3.8,3.8,0,1,1-3.8-3.853,3.828,3.828,0,0,1,3.8,3.853" transform="translate(-7.413 -4.52)" fill="#fff"/>
+        <path id="Path_690" data-name="Path 690" d="M33.523,17.223a3.8,3.8,0,1,1-3.8-3.853A3.828,3.828,0,0,1,33.523,17.223Z" transform="translate(-7.413 -4.52)" fill="#ef2f7f" stroke="#fff" stroke-miterlimit="10" stroke-width="1.59"/>
+      </g>
+    </g>
+  </g>
+</svg>
