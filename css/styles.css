@@ -7,10 +7,10 @@ author: Ivana J. - Digital Orange <jakimovska@gwcworld.com>
 /* ====== MIXINS ====== */
 /* ====== / MIXINS ====== */
 header .do-top-header {
-  background-image: linear-gradient(to left, #EF2F7F, #781840);
   -webkit-box-shadow: 0px 6px 6px rgba(0, 0, 0, 0.16);
   -moz-box-shadow: 0px 6px 6px rgba(0, 0, 0, 0.16);
   box-shadow: 0px 6px 6px rgba(0, 0, 0, 0.16);
+  background-image: linear-gradient(to left, #EF2F7F, #781840);
 }
 header .do-top-header .container {
   display: -webkit-box;
@@ -101,9 +101,10 @@ header .do-top-header .container .do-search:before {
   top: 0.5rem;
 }
 header nav ul {
-  margin: 0 auto;
   font-size: 1.25rem;
+  line-height: 1.5rem;
   font-weight: 700;
+  margin: 0 auto;
 }
 header nav ul .nav-item {
   padding: 0.5rem 1.25rem;
@@ -212,14 +213,14 @@ header nav .do-login {
   content: "";
 }
 .do-slider-wrap .do-custom-dots .slick-dots li button:before {
-  font-size: 1.125rem;
+  font-size: 1.225rem;
+  line-height: 1;
   border: 1px solid #EF2F7F;
   color: transparent;
   border-radius: 100%;
   opacity: 1;
   width: 15px;
   height: 15px;
-  line-height: 1;
 }
 
 .do-gallery {
@@ -314,14 +315,15 @@ header nav .do-login {
 }
 .do-gallery-items .do-top:before {
   content: "TOP";
-  position: absolute;
-  left: -2.5rem;
-  top: -3.75rem;
   font-size: 1.25rem;
+  line-height: 3.375rem;
   font-weight: 700;
   transform: rotate(45deg);
   -moz-transform: rotate(45deg);
   -webkit-transform: rotate(45deg);
+  position: absolute;
+  left: -2.5rem;
+  top: -4.3rem;
 }
 .do-gallery-items img {
   width: 100%;
@@ -354,22 +356,23 @@ header nav .do-login {
   flex-wrap: nowrap;
   -ms-flex-wrap: nowrap;
 }
-.do-gallery-items .do-item-info .do-item-info-top .do-left-wrap {
-  line-height: 2.375rem;
-}
 .do-gallery-items .do-item-info .do-item-info-top .do-left-wrap h1 {
   font-size: 2.875rem;
+  line-height: 2.375rem;
   font-weight: 700;
   margin-bottom: 0;
 }
 .do-gallery-items .do-item-info .do-item-info-top .do-left-wrap p {
   font-size: 1.5rem;
+  line-height: 2.375rem;
+  font-weight: 300;
   margin-bottom: 0;
 }
 .do-gallery-items .do-item-info .do-item-info-top .do-right-wrap .do-photos-num {
-  position: relative;
   font-size: 1.25rem;
+  line-height: 2.375rem;
   font-weight: 300;
+  position: relative;
 }
 .do-gallery-items .do-item-info .do-item-info-top .do-right-wrap .do-photos-num:before {
   content: "";
@@ -384,9 +387,10 @@ header nav .do-login {
   text-align: right;
 }
 .do-gallery-items .do-item-info .do-item-info-bottom span {
-  position: relative;
   font-size: 1.125rem;
+  line-height: 2.125rem;
   font-weight: 700;
+  position: relative;
 }
 .do-gallery-items .do-item-info .do-item-info-bottom span:before {
   content: "";
@@ -421,10 +425,13 @@ header nav .do-login {
 }
 .do-gallery-items .do-overlay .do-text h1 {
   font-size: 1.75rem;
+  line-height: 2.5rem;
   font-weight: 700;
 }
 .do-gallery-items .do-overlay .do-text p {
   font-size: 1.25rem;
+  line-height: 2.5rem;
+  font-weight: 700;
 }
 
 .do-ricerca-gallery .do-gallery-items .do-item-info .do-item-info-top {
@@ -473,14 +480,15 @@ header nav .do-login {
   width: 50%;
 }
 .do-ricerca-gallery .do-gallery-items .do-item-info .do-item-info-top .do-right-wrap .badge {
+  font-size: 0.9375rem;
+  line-height: 1.125rem;
+  font-weight: 900;
   width: 90px;
   height: 30px;
   background: #ffffff;
   color: #EF2F7F;
   border-radius: 25px;
   padding: 0.5rem;
-  font-size: 0.9375rem;
-  font-weight: 900;
   position: relative;
 }
 .do-ricerca-gallery .do-gallery-items .do-item-info .do-item-info-top .do-right-wrap .badge:before {
@@ -610,8 +618,8 @@ footer .container .do-links ul {
   width: 100%;
 }
 footer .container .do-links ul li {
-  padding: 1rem;
   font-weight: 700;
+  padding: 1rem;
 }
 footer .container .do-links ul li a {
   color: #ffffff;
@@ -686,8 +694,6 @@ footer .container .do-social:before {
     height: 100%;
   }
   footer .container {
-    padding-top: 2rem;
-    padding-bottom: 2rem;
     display: -webkit-box;
     /* OLD - iOS 6-, Safari 3.1-6 */
     display: -moz-box;
@@ -707,6 +713,8 @@ footer .container .do-social:before {
     -ms-flex-direction: column;
     flex-wrap: nowrap;
     -ms-flex-wrap: nowrap;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
   }
   footer .container .do-logo {
     width: 50%;
@@ -848,18 +856,18 @@ footer .container .do-social:before {
 .do-filter .container .do-results {
   color: #EF2F7F;
   font-size: 1.25rem;
-  font-weight: 700;
   line-height: 2.25rem;
+  font-weight: 700;
   text-align: center;
   margin-top: 2.5rem;
 }
 .do-filter .container .do-map {
   display: block;
+  line-height: 1.375rem;
+  font-weight: 700;
   text-align: center;
   color: #5C5C5C;
-  font-weight: 700;
   text-decoration: underline;
-  line-height: 2.375rem;
   margin-left: 3rem;
 }
 .do-filter .container .do-map .do-map-img {
@@ -881,8 +889,8 @@ footer .container .do-social:before {
   padding: 1rem 3rem;
 }
 .do-filter-modal-title {
-  line-height: 2.375rem;
   font-size: 2.875rem;
+  line-height: 2.375rem;
   font-weight: 700;
   text-align: center;
   margin-bottom: 1.125rem;
@@ -1086,8 +1094,8 @@ form input:-moz-placeholder {
 }
 form label {
   font-size: 1.5rem;
-  font-weight: 700;
   line-height: 2.375rem;
+  font-weight: 700;
 }
 form label a {
   color: #EF2F7F;
@@ -1098,9 +1106,9 @@ form label a:hover {
   opacity: 0.7;
 }
 form small {
+  font-size: 1.0625rem;
   font-weight: 300;
   font-style: italic;
-  font-size: 1.0625rem;
 }
 form small a {
   color: #EF2F7F;
@@ -1112,12 +1120,13 @@ form small a:hover {
 }
 form .form-group .form-control,
 form .form-group .custom-select {
+  font-size: 1.25rem;
+  line-height: 1;
+  font-weight: 700;
   height: 50px;
   border-radius: 1.5625rem;
   border: 2px solid #B4B4B4;
   color: #5C5C5C;
-  font-weight: 700;
-  font-size: 1.25rem;
 }
 form .form-group .custom-select {
   background: #ffffff url("../images/arrow.svg") no-repeat right 1.3rem center/16px 10px;
@@ -1126,11 +1135,12 @@ form .form-group .custom-control {
   padding: 0;
 }
 form .form-group .custom-control .custom-control-label {
+  font-size: 1rem;
+  line-height: 2.375rem;
+  font-weight: 700;
   width: 155px;
   height: 50px;
   left: 0;
-  font-size: 1rem;
-  font-weight: 700;
   padding: 0.3rem;
   color: #5C5C5C;
   background-color: #ffffff;
@@ -1253,9 +1263,9 @@ form .do-check .custom-checkbox .custom-control-input:checked ~ .custom-control-
   line-height: 1.6em;
 }
 .do-range.ui-widget.ui-slider-horizontal .do-handle-value {
-  margin-top: 2.5rem;
   font-size: 1rem;
   font-weight: 700;
+  margin-top: 2.5rem;
   width: 70px;
 }
 .do-range.ui-widget.ui-widget-content .ui-state-default {

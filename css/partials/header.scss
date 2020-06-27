@@ -1,144 +1,145 @@
 header {
-    .do-top-header {
-        background-image: linear-gradient(to left, $pink, $darkpink);
-        @include box-shadow(0px 6px 6px  rgba(0,0,0,0.16));
+  .do-top-header {
+    @include box-shadow(0px 6px 6px rgba(0, 0, 0, 0.16));
+    background-image: linear-gradient(to left, $pink, $darkpink);
 
-        .container {
-            @include flex(space-between, space-between, center, row, nowrap);
-            .do-toggler {
-                display: none;
-                .navbar-toggler-icon {
-                    background: url("../images/bars.svg") no-repeat;
-                }
-            }
+    .container {
+      @include flex(space-between, space-between, center, row, nowrap);
+      .do-toggler {
+        display: none;
+        .navbar-toggler-icon {
+          background: url("../images/bars.svg") no-repeat;
+        }
+      }
 
-            .do-search {
-                position: relative;
-                input {
-                    background: transparent;
-                    color: $white;
-                    border: unset;
-                    border-radius: unset;
-                    border-bottom: 1px solid $white;
-                    margin-left: 1.875rem;
-                    @include input_placeholder($white, 300, 17px, none, 1, 1, italic);
-                    &:focus {
-                        outline: none;
-                    }
-                }
-                &:before {
-                    content: "";
-                    position: absolute;
-                    background: url("../images/search.svg") no-repeat;
-                    width: 1.5rem;
-                    height: 1.5rem;
-                    background-size: contain;
-                    left: 0;
-                    top: 0.5rem;
-                }
-            }
+      .do-search {
+        position: relative;
+        input {
+          @include input_placeholder($white, 300, 17px, none, 1, 1, italic);
+          background: transparent;
+          color: $white;
+          border: unset;
+          border-radius: unset;
+          border-bottom: 1px solid $white;
+          margin-left: 1.875rem;
+
+          &:focus {
+            outline: none;
+          }
         }
+        &:before {
+          content: "";
+          position: absolute;
+          background: url("../images/search.svg") no-repeat;
+          width: 1.5rem;
+          height: 1.5rem;
+          background-size: contain;
+          left: 0;
+          top: 0.5rem;
+        }
+      }
     }
-    nav {
-        ul {
-            margin: 0 auto;
-            font-size: 1.25rem;
-            font-weight: 700;
-            .nav-item {
-                padding: 0.5rem 1.25rem;
-                .nav-link {
-                    color: $grey;
-                }
-                &.active {
-                    .nav-link {
-                        color: $pink;
-                    }
-                }
-            }
+  }
+  nav {
+    ul {
+      @include text(1.25rem, 1.5rem, 700);
+      margin: 0 auto;
+
+      .nav-item {
+        padding: 0.5rem 1.25rem;
+        .nav-link {
+          color: $grey;
         }
-        .do-login {
-            display: none;
+        &.active {
+          .nav-link {
+            color: $pink;
+          }
         }
+      }
     }
+    .do-login {
+      display: none;
+    }
+  }
 }
 
 @media (max-width: 768px) {
-    header {
-        .do-top-header {
-            @include box-shadow(0px 6px 6px  rgba(239,47,127,1));
-            .container {
-                .do-login {
-                    display: none;
-                }
-                .do-toggler {
-                    display: block;
-                    order: 1;
-                }
-                .do-search {
-                    order: 3;
-                }
-                .do-logo {
-                    order: 2;
-                }
-            }
+  header {
+    .do-top-header {
+      @include box-shadow(0px 6px 6px rgba(239, 47, 127, 1));
+      .container {
+        .do-login {
+          display: none;
         }
-        nav {
-            &.navbar {
-                position: absolute;
-                top: 0;
-                padding: 0;
-                z-index: 999999;
-                width: 100%;
-            
-                ul {
-                    padding: 2.0625rem 1.75rem;
-                }
-                .do-login {
-                    display: block;
-                    border-top: 1px solid $darkgrey;
-                    margin: 0 2.5rem;
-                    padding: 2.1875rem 0;
-                }
-                .navbar-collapse {
-                    position: absolute;
-                    top: 0;
-                    right: 100%;
-                    padding-left: 15px;
-                    padding-right: 15px;
-                    padding-bottom: 15px;
-                    width: 100%;
-                    transition: all 0.3s ease;
-                    display: block;
-                    background: $white;
-                    &.show {
-                        left: 0;
-                        -webkit-transition: left 0.3s ease-in;
-                        -o-transition: left 0.3s ease-in;
-                        -moz-transition: left 0.3s ease-in;
-                        transition: left 0.3s ease-in;
-                        .do-menu-close {
-                            &:before {
-                                content: "";
-                                position: absolute;
-                                background: url("../images/close.svg") no-repeat;
-                                width: 22px;
-                                height: 22px;
-                                background-size: contain;
-                                right: 1rem;
-                                top: 1rem;
-                            }
-                        }
-                    }
-                    &.collapsing {
-                        height: auto;
-                        -webkit-transition: left 0.3s ease;
-                        -o-transition: left 0.3s ease;
-                        -moz-transition: left 0.3s ease;
-                        transition: left 0.3s ease;
-                        left: -100%;
-                    }
-                }
-            }
+        .do-toggler {
+          display: block;
+          order: 1;
         }
+        .do-search {
+          order: 3;
+        }
+        .do-logo {
+          order: 2;
+        }
+      }
     }
+    nav {
+      &.navbar {
+        position: absolute;
+        top: 0;
+        padding: 0;
+        z-index: 999999;
+        width: 100%;
+
+        ul {
+          padding: 2.0625rem 1.75rem;
+        }
+        .do-login {
+          display: block;
+          border-top: 1px solid $darkgrey;
+          margin: 0 2.5rem;
+          padding: 2.1875rem 0;
+        }
+        .navbar-collapse {
+          position: absolute;
+          top: 0;
+          right: 100%;
+          padding-left: 15px;
+          padding-right: 15px;
+          padding-bottom: 15px;
+          width: 100%;
+          transition: all 0.3s ease;
+          display: block;
+          background: $white;
+          &.show {
+            left: 0;
+            -webkit-transition: left 0.3s ease-in;
+            -o-transition: left 0.3s ease-in;
+            -moz-transition: left 0.3s ease-in;
+            transition: left 0.3s ease-in;
+            .do-menu-close {
+              &:before {
+                content: "";
+                position: absolute;
+                background: url("../images/close.svg") no-repeat;
+                width: 22px;
+                height: 22px;
+                background-size: contain;
+                right: 1rem;
+                top: 1rem;
+              }
+            }
+          }
+          &.collapsing {
+            height: auto;
+            -webkit-transition: left 0.3s ease;
+            -o-transition: left 0.3s ease;
+            -moz-transition: left 0.3s ease;
+            transition: left 0.3s ease;
+            left: -100%;
+          }
+        }
+      }
+    }
+  }
 }

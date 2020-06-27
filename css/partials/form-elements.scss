@@ -7,14 +7,12 @@
 
 form {
   color: $grey;
-  font-weight: 700;
+  @include text($weight: 700);
   input {
     @include input_placeholder($white, 300, 17px, none, 1, 1, italic);
   }
   label {
-    font-size: 1.5rem;
-    font-weight: 700;
-    line-height: 2.375rem;
+    @include text(1.5rem, 2.375rem, 700);
     a {
       color: $pink;
       text-decoration: underline;
@@ -25,9 +23,9 @@ form {
     }
   }
   small {
-    font-weight: 300;
+    @include text($size: 1.0625rem, $weight: 300);
     font-style: italic;
-    font-size: 1.0625rem;
+
     a {
       color: $pink;
       text-decoration: underline;
@@ -40,12 +38,11 @@ form {
   .form-group {
     .form-control,
     .custom-select {
+      @include text(1.25rem, 1, 700);
       height: 50px;
       border-radius: 1.5625rem;
       border: 2px solid $lightgrey;
       color: $grey;
-      font-weight: 700;
-      font-size: 1.25rem;
     }
     .custom-select {
       background: $white url("../images/arrow.svg") no-repeat right 1.3rem
@@ -57,11 +54,10 @@ form {
 
       //    Radio buttons
       .custom-control-label {
+        @include text(1rem, 2.375rem, 700);
         width: 155px;
         height: 50px;
         left: 0;
-        font-size: 1rem;
-        font-weight: 700;
         padding: 0.3rem;
         color: $grey;
         background-color: $white;
@@ -222,9 +218,8 @@ form {
         line-height: 1.6em;
       }
       .do-handle-value {
+        @include text($size: 1rem, $weight: 700);
         margin-top: 2.5rem;
-        font-size: 1rem;
-        font-weight: 700;
         width: 70px;
       }
     }
@@ -266,7 +261,7 @@ form {
 @media (max-width: 768px) {
   form {
     label {
-      font-size: 1.25rem;
+      @include text($size: 1.25rem);
     }
   }
 }
