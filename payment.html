@@ -79,72 +79,60 @@
         </nav>
     </header>
     <main>
-        <section class="do-register">
+        <section class="do-payment">
             <div class="container">
 
                 <form>
-                    <h1 class="do-grey-title text-center">Registrati</h1>
+                    <h1 class="do-grey-title text-center">Metodo di pagamento</h1>
                     <div class="row">
                         <div class="col-lg-6 col-sm-12">
-                            <div class="form-group ">
-                                <label for="email">E-mail</label>
-                                <input type="text" name="email" class="form-control" id="email"
-                                    placeholder="E-mail">
-                            </div>
-                        </div>
-                        <div class="col-lg-6 col-sm-12">
-                            <div class="form-group ">
-                                <label for="phone">Telefono di Contatto</label>
-                                <input type="text" name="phone" class="form-control" id="phone"
-                                    placeholder="Telefono di Contatto">
-                                    <small>con prefisso internazionale</small>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-lg-6 col-sm-12">
-                            <div class="form-group ">
-                                <label for="password">Password</label>
-                                <input type="password" name="password" class="form-control" id="password"
-                                    placeholder="Password">
-                            </div>
-                        </div>
-                        <div class="col-lg-6 col-sm-12">
-                            <div class="form-group ">
-                                <label for="phone">Conferma password</label>
-                                <input type="password" name="password_confirmation" class="form-control" id="password_confirmation"
-                                    placeholder="Conferma password">
-                                   
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-lg-6 col-sm-12">
-                            <div class="form-group ">
-                                <label for="code">Hai un codice?</label>
-                                <input type="text" name="code" class="form-control" id="code"
-                                    placeholder="Hai un codice?">
-                                    <small><a href="#">Maggiori informazioni</a></small>
-                                   
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-lg-6 col-sm-12">
-                            <div class="form-check do-check">
-                                <div class="custom-control custom-checkbox">
-                                    <input type="checkbox" name="conditions" class="custom-control-input" id="conditions">
-                                
-                                    <label class="custom-control-label do-conditions" for="conditions">Per proseguire devi accettare 
-                                        <a href="#"> termini e condizioni</a></label>
-                                  </div>
+                            <div class="form-group">
                                
-                              </div>
+                                
+                                    <div class="custom-control custom-radio">
+                                        <input type="radio" name="payment" value="credit-card" id="credit-card" class="custom-control-input">
+                                        
+                                        <label class="custom-control-label do-w-100"  for="credit-card"><i class="do-card"></i>CARTA DI CREDITO</label>
+                                    </div>
+                                   
+                               
+                            
+                            
+                            </div>
                         </div>
-                       
+                        <div class="col-lg-6 col-sm-12">
+                            <div class="form-group ">
+                                <div class="custom-control custom-radio">
+                                    <input type="radio" name="payment" value="paypal" id="paypal" class="custom-control-input">
+                                    <label class="custom-control-label do-w-100"  for="paypal"><i class="do-paypal"></i>PAYPAL O PREPAGATE</label>
+                                </div>
+                                
+                            </div>
+                        </div>
                     </div>
                     <div class="row">
-                        <button type="submit" class="btn btn-pink m-0-auto">AVANTI</button>
+                        <div class="col-lg-6 col-sm-12">
+                            <div class="form-group ">
+                                <div class="custom-control custom-radio">
+                                    <input type="radio" name="payment" value="bank" id="bank" class="custom-control-input">
+                                    <label class="custom-control-label do-w-100"  for="bank"><i class="do-bank"></i>BONIFICO</label>
+                                </div>
+                               
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-sm-12">
+                        <div class="form-group ">
+                            <div class="custom-control custom-radio">
+                                <input type="radio" name="payment" value="bitcoin" id="bitcoin" class="custom-control-input">
+                                <label class="custom-control-label do-w-100"  for="bitcoin"><i class="do-bitcoin"></i>BITCOIN</label>
+                            </div>
+                            
+                        </div>
+                        </div>
+                    </div>
+                   
+                    <div class="row">
+                        <button type="submit" class="btn btn-pink m-2-auto">AVANTI</button>
                     </div>
                 </form>
 

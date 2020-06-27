@@ -1,206 +1,289 @@
 // Forms
+.form-control {
+  &:focus {
+    box-shadow: unset;
+  }
+}
+
 form {
-    color: $grey;
+  color: $grey;
+  font-weight: 700;
+  input {
+    @include input_placeholder($white, 300, 17px, none, 1, 1, italic);
+  }
+  label {
+    font-size: 1.5rem;
     font-weight: 700;
-    input{
-        @include input_placeholder($white, 300, 17px, none, 1, 1, italic);
+    line-height: 2.375rem;
+    a {
+      color: $pink;
+      text-decoration: underline;
+      &:hover {
+        color: $pink;
+        opacity: 0.7;
+      }
     }
-    label {
-        font-size: 1.5rem;
+  }
+  small {
+    font-weight: 300;
+    font-style: italic;
+    font-size: 1.0625rem;
+    a {
+      color: $pink;
+      text-decoration: underline;
+      &:hover {
+        color: $pink;
+        opacity: 0.7;
+      }
+    }
+  }
+  .form-group {
+    .form-control,
+    .custom-select {
+      height: 50px;
+      border-radius: 1.5625rem;
+      border: 2px solid $lightgrey;
+      color: $grey;
+      font-weight: 700;
+      font-size: 1.25rem;
+    }
+    .custom-select {
+      background: $white url("../images/arrow.svg") no-repeat right 1.3rem
+        center/16px 10px;
+    }
+    // Radio & checkbox
+    .custom-control {
+      padding: 0;
+
+      //    Radio buttons
+      .custom-control-label {
+        width: 155px;
+        height: 50px;
+        left: 0;
+        font-size: 1rem;
         font-weight: 700;
-        line-height: 2.375rem;
-        a{
-            color: $pink;
-            text-decoration: underline;
+        padding: 0.3rem;
+        color: $grey;
+        background-color: $white;
+        border-radius: 25px;
+        border: 2px solid $lightgrey;
+        text-align: center;
+
+        &:before {
+          width: 155px;
+          height: 50px;
+          border-radius: 1.5625rem;
+          left: 0;
+          background-color: transparent;
+          border: unset;
+          top: 0;
         }
-    }
-    small{
-        font-weight: 300;
-        font-style: italic;
-        font-size: 1.0625rem;
-        a{
-            color: $pink;
-            text-decoration: underline;
+        &::after {
+          background-image: unset !important;
         }
-    }
-    .form-group {
-        .form-control,
-        .custom-select {
-            height: 50px;
-            border-radius: 1.5625rem;
-            border: 2px solid $lightgrey;
-            color: $grey;
-            font-weight: 700;
-            font-size: 1.25rem;
+        &:hover {
+          opacity: 0.7;
         }
-        .custom-select {
-            background: #fff url("../images/arrow.svg") no-repeat right 1.3rem center/16px 10px;
-        }
-        .custom-control {
-            padding: 0;
-            //    Radio buttons
-        .custom-control-label {
-            width: 155px;
-            height: 50px;
-            left: 0;
+        &.do-w-100 {
+          width: 100%;
+
+          &::before,
+          &::after {
+            width: 100%;
+          }
+          i {
+            position: relative;
             &:before {
-                width: 155px;
-                height: 50px;
-                border-radius: 1.5625rem;
-                left: 0;
-                border: 2px solid $lightgrey;
+              content: "";
+              position: absolute;
+              background-size: contain;
+              width: 30px;
+              height: 30px;
+              left: -2rem;
+              top: -0.2rem;
             }
-            &::after {
-                content: attr(category);
-                position: absolute;
-                color: $grey;
-                top: 60% !important;
-                
-                @include abs-center();
-                font-size: 1rem;
-                font-weight: 700;
-                width: auto;
-                height: auto;
-                background-image: unset !important;
+            &.do-card {
+              &:before {
+                background: url("../images/credit-card.svg") no-repeat;
+              }
             }
-            &:hover {
-                opacity: 0.7;
+            &.do-bank {
+              &:before {
+                background: url("../images/bank.svg") no-repeat;
+              }
             }
+            &.do-bitcoin {
+              &:before {
+                background: url("../images/bitcoin.svg") no-repeat;
+              }
+            }
+            &.do-paypal {
+              &:before {
+                background: url("../images/paypal.svg") no-repeat;
+              }
+            }
+          }
         }
-        .custom-control-input {
-            &:checked ~ .custom-control-label {
+      }
+      input[type="checkbox"] {
+        &:checked ~ .custom-control-label {
+          background: $grey;
+        }
+      }
+      .custom-control-input {
+        &:checked ~ .custom-control-label {
+          background: transparent;
+          color: white;
+          border: unset;
+
+          &::before {
+            border-color: $lightgrey;
+            background-color: $grey;
+            z-index: -1;
+          }
+          &::after {
+            color: $white;
+          }
+          &.do-w-100 {
+            i {
+              &.do-bank {
                 &::before {
-                    border-color: $lightgrey;
-                    background-color: $grey;
+                  background: url("../images/bank_white.svg") no-repeat;
                 }
-                &::after {
-                    color: $white;
+              }
+              &.do-paypal {
+                &::before {
+                  background: url("../images/paypal_white.svg") no-repeat;
                 }
+              }
+              &.do-card {
+                &::before {
+                  background: url("../images/credit_card_white.svg") no-repeat;
+                }
+              }
+              &.do-bitcoin {
+                &::before {
+                  background: url("../images/bitcoin_white.svg") no-repeat;
+                }
+              }
             }
+          }
         }
-            
-        }
-        
-       
+      }
     }
-    .do-check{
-        .custom-checkbox {
-            .custom-control-label{
-                &::before{
-                    border-radius: unset;
-                    border:1px solid $darkgrey;
-                    top: 0.7rem;
-                }
-            }
-            .custom-control-input{
-                top: 0.7rem;
-                &:checked ~ .custom-control-label {
-                    &::before {
-                        border-color: $lightgrey ;
-                        background-color: $grey ;
-                        top: 0.7rem;
-                   
-                    }
-                    &::after{
-                        top: 0.7rem;
-                    }
-                   
-                }
-                
-            }
+  }
+  //   Checkbox clean
+  .do-check {
+    .custom-checkbox {
+      .custom-control-label {
+        &::before {
+          border-radius: unset;
+          border: 1px solid $darkgrey;
+          top: 0.7rem;
         }
-       
-        
+        &::after {
+          top: 0.7rem;
+        }
+      }
+      .custom-control-input {
+        top: 0.7rem;
+        &:checked ~ .custom-control-label {
+          &::before {
+            border-color: $lightgrey;
+            background-color: $grey;
+            top: 0.7rem;
+          }
+          &::after {
+            top: 0.7rem;
+          }
+        }
+      }
     }
+  }
 }
 
 // Range
 .do-range {
-    width: 80%;
-    &.ui-widget {
-        margin-top: 1.5rem;
-        &.ui-widget-content {
-            border: 1px solid $lightgrey;
-        }
-        &.ui-slider-horizontal {
-            height: 0.1rem;
-            .custom-handle-from,
-            .custom-handle-to {
-                width: 2.2em;
-                height: 2.2em;
-                top: 50%;
-                margin-top: -1em;
-                text-align: center;
-                line-height: 1.6em;
-            }
-            .do-handle-value {
-                margin-top: 2.5rem;
-                font-size: 1rem;
-                font-weight: 700;
-                width: 70px;
-            }
-        }
-        &.ui-widget-content {
-            .ui-state-default {
-                border: 3px solid $pink;
-                background: $white;
-                border-radius: 1.5625rem;
-                .do-handle-value {
-                    color: $grey;
-                }
-            }
-        }
+  width: 80%;
+  &.ui-widget {
+    margin-top: 1.5rem;
+    &.ui-widget-content {
+      border: 1px solid $lightgrey;
     }
+    &.ui-slider-horizontal {
+      height: 0.1rem;
+      .custom-handle-from,
+      .custom-handle-to {
+        width: 2.2em;
+        height: 2.2em;
+        top: 50%;
+        margin-top: -1em;
+        text-align: center;
+        line-height: 1.6em;
+      }
+      .do-handle-value {
+        margin-top: 2.5rem;
+        font-size: 1rem;
+        font-weight: 700;
+        width: 70px;
+      }
+    }
+    &.ui-widget-content {
+      .ui-state-default {
+        border: 3px solid $pink;
+        background: $white;
+        border-radius: 1.5625rem;
+        .do-handle-value {
+          color: $grey;
+        }
+      }
+    }
+  }
 }
 // Location input
 .do-location-wrap {
-    &::before {
-        content: "";
-        position: absolute;
-        background: url("../images/location.svg") no-repeat;
-        background-size: contain;
-        width: 30px;
-        height: 30px;
-        right: 2rem;
-        top: 3.5rem;
-    }
+  &::before {
+    content: "";
+    position: absolute;
+    background: url("../images/location.svg") no-repeat;
+    background-size: contain;
+    width: 30px;
+    height: 30px;
+    right: 2rem;
+    top: 3.5rem;
+  }
 }
 
-@media (max-width:1440px){
-    form {
-
-        .form-group {
-            .custom-control{
-                padding: 0 0.2rem;
-            }
-        }
+@media (max-width: 1440px) {
+  form {
+    .form-group {
+      .custom-control {
+        padding: 0 0.2rem;
+      }
     }
-    
+  }
 }
 @media (max-width: 768px) {
-    form {
-        label {
-            font-size: 1.25rem;
-        }
-      
+  form {
+    label {
+      font-size: 1.25rem;
     }
+  }
 }
 
-
 @media (max-width: 425px) {
-    form {
-
-        .form-group {
-            .custom-control{
-                padding: 0 0.1rem;
-                margin: 1rem 0;
-            }
-            .custom-control-label{
-                width: 125px;
-                &:before{
-                    width: 125px;
-                }
-            }
+  form {
+    .form-group {
+      .custom-control {
+        padding: 0 0.1rem;
+        margin: 1rem 0;
+      }
+      .custom-control-label {
+        width: 125px;
+        &:before {
+          width: 125px;
         }
+      }
     }
+  }
 }

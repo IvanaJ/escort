@@ -786,7 +786,6 @@ footer .container .do-social:before {
   -ms-flex-direction: row;
   flex-wrap: nowrap;
   -ms-flex-wrap: nowrap;
-  padding: 2rem 0 0 0;
 }
 .do-filter .container form .form-group {
   padding: 0 1rem;
@@ -1040,6 +1039,10 @@ footer .container .do-social:before {
     margin: 1rem 0.5rem;
   }
 }
+.form-control:focus {
+  box-shadow: unset;
+}
+
 form {
   color: #5C5C5C;
   font-weight: 700;
@@ -1090,6 +1093,10 @@ form label a {
   color: #EF2F7F;
   text-decoration: underline;
 }
+form label a:hover {
+  color: #EF2F7F;
+  opacity: 0.7;
+}
 form small {
   font-weight: 300;
   font-style: italic;
@@ -1098,6 +1105,10 @@ form small {
 form small a {
   color: #EF2F7F;
   text-decoration: underline;
+}
+form small a:hover {
+  color: #EF2F7F;
+  opacity: 0.7;
 }
 form .form-group .form-control,
 form .form-group .custom-select {
@@ -1109,7 +1120,7 @@ form .form-group .custom-select {
   font-size: 1.25rem;
 }
 form .form-group .custom-select {
-  background: #fff url("../images/arrow.svg") no-repeat right 1.3rem center/16px 10px;
+  background: #ffffff url("../images/arrow.svg") no-repeat right 1.3rem center/16px 10px;
 }
 form .form-group .custom-control {
   padding: 0;
@@ -1118,43 +1129,94 @@ form .form-group .custom-control .custom-control-label {
   width: 155px;
   height: 50px;
   left: 0;
+  font-size: 1rem;
+  font-weight: 700;
+  padding: 0.3rem;
+  color: #5C5C5C;
+  background-color: #ffffff;
+  border-radius: 25px;
+  border: 2px solid #B4B4B4;
+  text-align: center;
 }
 form .form-group .custom-control .custom-control-label:before {
   width: 155px;
   height: 50px;
   border-radius: 1.5625rem;
   left: 0;
-  border: 2px solid #B4B4B4;
+  background-color: transparent;
+  border: unset;
+  top: 0;
 }
 form .form-group .custom-control .custom-control-label::after {
-  content: attr(category);
-  position: absolute;
-  color: #5C5C5C;
-  top: 60% !important;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  -moz-transform: translate(-50%, -50%);
-  -webkit-transform: translate(-50%, -50%);
-  font-size: 1rem;
-  font-weight: 700;
-  width: auto;
-  height: auto;
   background-image: unset !important;
 }
 form .form-group .custom-control .custom-control-label:hover {
   opacity: 0.7;
 }
+form .form-group .custom-control .custom-control-label.do-w-100 {
+  width: 100%;
+}
+form .form-group .custom-control .custom-control-label.do-w-100::before, form .form-group .custom-control .custom-control-label.do-w-100::after {
+  width: 100%;
+}
+form .form-group .custom-control .custom-control-label.do-w-100 i {
+  position: relative;
+}
+form .form-group .custom-control .custom-control-label.do-w-100 i:before {
+  content: "";
+  position: absolute;
+  background-size: contain;
+  width: 30px;
+  height: 30px;
+  left: -2rem;
+  top: -0.2rem;
+}
+form .form-group .custom-control .custom-control-label.do-w-100 i.do-card:before {
+  background: url("../images/credit-card.svg") no-repeat;
+}
+form .form-group .custom-control .custom-control-label.do-w-100 i.do-bank:before {
+  background: url("../images/bank.svg") no-repeat;
+}
+form .form-group .custom-control .custom-control-label.do-w-100 i.do-bitcoin:before {
+  background: url("../images/bitcoin.svg") no-repeat;
+}
+form .form-group .custom-control .custom-control-label.do-w-100 i.do-paypal:before {
+  background: url("../images/paypal.svg") no-repeat;
+}
+form .form-group .custom-control input[type=checkbox]:checked ~ .custom-control-label {
+  background: #5C5C5C;
+}
+form .form-group .custom-control .custom-control-input:checked ~ .custom-control-label {
+  background: transparent;
+  color: white;
+  border: unset;
+}
 form .form-group .custom-control .custom-control-input:checked ~ .custom-control-label::before {
   border-color: #B4B4B4;
   background-color: #5C5C5C;
+  z-index: -1;
 }
 form .form-group .custom-control .custom-control-input:checked ~ .custom-control-label::after {
   color: #ffffff;
 }
+form .form-group .custom-control .custom-control-input:checked ~ .custom-control-label.do-w-100 i.do-bank::before {
+  background: url("../images/bank_white.svg") no-repeat;
+}
+form .form-group .custom-control .custom-control-input:checked ~ .custom-control-label.do-w-100 i.do-paypal::before {
+  background: url("../images/paypal_white.svg") no-repeat;
+}
+form .form-group .custom-control .custom-control-input:checked ~ .custom-control-label.do-w-100 i.do-card::before {
+  background: url("../images/credit_card_white.svg") no-repeat;
+}
+form .form-group .custom-control .custom-control-input:checked ~ .custom-control-label.do-w-100 i.do-bitcoin::before {
+  background: url("../images/bitcoin_white.svg") no-repeat;
+}
 form .do-check .custom-checkbox .custom-control-label::before {
   border-radius: unset;
   border: 1px solid #707070;
+  top: 0.7rem;
+}
+form .do-check .custom-checkbox .custom-control-label::after {
   top: 0.7rem;
 }
 form .do-check .custom-checkbox .custom-control-input {
@@ -1291,7 +1353,11 @@ body {
 }
 
 *:focus {
-  outline: none;
+  outline: none !important;
+}
+
+*:visited {
+  outline: none !important;
 }
 
 button:focus {
@@ -1319,12 +1385,21 @@ h1.do-grey-title {
   font-size: 2.875rem;
   font-weight: 700;
   text-align: center;
+  margin-bottom: 2.375rem;
 }
 
 hr {
   border-top: 4px solid #707070;
   border-radius: 25px;
   margin: 1rem 5rem;
+}
+
+.m-0-auto {
+  margin: 0 auto;
+}
+
+.m-2-auto {
+  margin: 2rem auto;
 }
 
 .btn:hover {
@@ -1375,15 +1450,10 @@ hr {
   font-size: 24px;
 }
 
-.do-register {
+section.do-register, section.do-payment {
   margin: 3rem 0;
 }
-.do-register h1 {
-  text-align: center;
-}
-.do-register-btn button {
-  margin: 0 auto;
-}
+
 .do-register .do-conditions {
   font-weight: 300;
   font-style: italic;
@@ -1404,6 +1474,15 @@ hr {
 @media (max-width: 768px) {
   main {
     margin-top: 1.5rem;
+  }
+  main .do-register form .row:first-of-type, main .do-register form .row:nth-of-type(2) {
+    margin-bottom: 2.75rem;
+  }
+  main .do-register form .row:nth-of-type(3) {
+    margin-bottom: 3.125rem;
+  }
+  main .do-register form .row:nth-of-type(4) {
+    margin-bottom: 2.75rem;
   }
 }
 

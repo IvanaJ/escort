@@ -5,7 +5,7 @@
         color: $grey;
         form {
             @include flex(initial, initial, flex-start, row, nowrap);
-            padding: 2rem 0 0 0;
+           
 
             .form-group {
                 padding: 0 1rem;

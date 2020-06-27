@@ -45,7 +45,10 @@ body {
   box-sizing: border-box;
 }
 *:focus {
-  outline: none;
+  outline: none !important;
+}
+*:visited{
+  outline: none !important;
 }
 
 button {
@@ -76,12 +79,19 @@ h1 {
     font-size: 2.875rem;
     font-weight: 700;
     text-align: center;
+    margin-bottom: 2.375rem;
   }
 }
 hr {
   border-top: 4px solid $darkgrey;
   border-radius: 25px;
   margin: 1rem 5rem;
+}
+.m-0-auto {
+  margin: 0 auto;
+}
+.m-2-auto{
+  margin:2rem auto;
 }
 // Buttons
 .btn {
@@ -134,17 +144,14 @@ hr {
     }
   }
 }
+section {
+  &.do-register,
+  &.do-payment {
+    margin: 3rem 0;
+  }
+}
 // Register Page
 .do-register {
-  margin: 3rem 0;
-  h1 {
-    text-align: center;
-  }
-  &-btn {
-    button {
-      margin: 0 auto;
-    }
-  }
   .do-conditions {
     font-weight: 300;
     font-style: italic;
@@ -169,5 +176,21 @@ hr {
 @media (max-width: 768px) {
   main {
     margin-top: 1.5rem;
+    .do-register {
+      form {
+        .row {
+          &:first-of-type,
+          &:nth-of-type(2) {
+            margin-bottom: 2.75rem;
+          }
+          &:nth-of-type(3) {
+            margin-bottom: 3.125rem;
+          }
+          &:nth-of-type(4) {
+            margin-bottom: 2.75rem;
+          }
+        }
+      }
+    }
   }
 }
