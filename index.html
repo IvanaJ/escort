@@ -35,9 +35,33 @@
                 </button>
 
                 <div class="do-search">
+                    <form id="doSearchForm">
+                        <img src="images/search.svg">
+                        <input id="do-search" type="text" class="form-control" placeholder="Search">
+                    </form>
+                    <img class="do-mobile-search" src="images/search.svg">
 
-                    <input type="text" class="form-control" placeholder="Search">
                 </div>
+                <div id="doOverlay" class="do-overlay">
+                    <span class="do-overlay-closebtn" title="Close Overlay"></span>
+                    <div class="do-overlay-content">
+                        <form action="">
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" id="search" placeholder="Search">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12">
+                                    <button type="submit" class="btn btn-pink">Search</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
                 <div class="do-logo">
                     <img src="images/logo.png">
                 </div>

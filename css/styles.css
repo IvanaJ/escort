@@ -39,18 +39,38 @@ header .do-top-header .container .do-toggler {
 header .do-top-header .container .do-toggler .navbar-toggler-icon {
   background: url("../images/bars.svg") no-repeat;
 }
-header .do-top-header .container .do-search {
-  position: relative;
+header .do-top-header .container .do-logo img {
+  width: 100%;
 }
-header .do-top-header .container .do-search input {
+header .do-top-header .container .do-search form {
+  display: -webkit-box;
+  /* OLD - iOS 6-, Safari 3.1-6 */
+  display: -moz-box;
+  /* OLD - Firefox 19- (buggy but mostly works) */
+  display: -ms-flexbox;
+  /* TWEENER - IE 10 */
+  display: -webkit-flex;
+  /* NEW - Chrome */
+  display: flex;
+  /* NEW, Spec - Opera 12.1, Firefox 20+ */
+  justify-content: initial;
+  -ms-justify-content: initial;
+  align-content: initial;
+  align-items: initial;
+  -ms-flex-align: initial;
+  flex-direction: row;
+  -ms-flex-direction: row;
+  flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+}
+header .do-top-header .container .do-search form input {
   background: transparent;
   color: #ffffff;
   border: unset;
   border-radius: unset;
   border-bottom: 1px solid #ffffff;
-  margin-left: 1.875rem;
 }
-header .do-top-header .container .do-search input::-webkit-input-placeholder {
+header .do-top-header .container .do-search form input::-webkit-input-placeholder {
   /* Chrome/Opera/Safari */
   color: #ffffff;
   font-size: 17px;
@@ -60,7 +80,7 @@ header .do-top-header .container .do-search input::-webkit-input-placeholder {
   opacity: 1;
   font-style: italic;
 }
-header .do-top-header .container .do-search input::-moz-placeholder {
+header .do-top-header .container .do-search form input::-moz-placeholder {
   /* Firefox 19+ */
   color: #ffffff;
   font-size: 17px;
@@ -69,7 +89,7 @@ header .do-top-header .container .do-search input::-moz-placeholder {
   line-height: 1;
   font-style: italic;
 }
-header .do-top-header .container .do-search input:-ms-input-placeholder {
+header .do-top-header .container .do-search form input:-ms-input-placeholder {
   /* IE 10+ */
   color: #ffffff;
   font-size: 17px;
@@ -78,7 +98,7 @@ header .do-top-header .container .do-search input:-ms-input-placeholder {
   line-height: 1;
   font-style: italic;
 }
-header .do-top-header .container .do-search input:-moz-placeholder {
+header .do-top-header .container .do-search form input:-moz-placeholder {
   /* Firefox 18- */
   color: #ffffff;
   font-size: 17px;
@@ -87,18 +107,39 @@ header .do-top-header .container .do-search input:-moz-placeholder {
   line-height: 1;
   font-style: italic;
 }
-header .do-top-header .container .do-search input:focus {
+header .do-top-header .container .do-search form input:focus {
   outline: none;
 }
-header .do-top-header .container .do-search:before {
-  content: "";
-  position: absolute;
-  background: url("../images/search.svg") no-repeat;
-  width: 1.5rem;
-  height: 1.5rem;
-  background-size: contain;
+header .do-top-header .container .do-search .do-mobile-search {
+  display: none;
+}
+header .do-top-header .container .do-overlay {
+  height: 100%;
+  width: 100%;
+  display: none;
+  position: fixed;
+  z-index: 11;
+  top: 0;
   left: 0;
-  top: 0.5rem;
+  background-color: black;
+  background-color: rgba(0, 0, 0, 0.9);
+}
+header .do-top-header .container .do-overlay-content {
+  position: relative;
+  top: 46%;
+  width: 80%;
+  text-align: center;
+  margin-top: 30px;
+  margin: auto;
+}
+header .do-top-header .container .do-overlay-closebtn {
+  content: "";
+  background: url("../images/close_white.svg") no-repeat;
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  width: 30px;
+  height: 30px;
 }
 header nav ul {
   font-size: 1.25rem;
@@ -135,7 +176,14 @@ header nav .do-login {
   header .do-top-header .container .do-search {
     order: 3;
   }
+  header .do-top-header .container .do-search form {
+    display: none;
+  }
+  header .do-top-header .container .do-search .do-mobile-search {
+    display: block;
+  }
   header .do-top-header .container .do-logo {
+    text-align: center;
     order: 2;
   }
   header nav.navbar {
@@ -190,6 +238,11 @@ header nav .do-login {
     -moz-transition: left 0.3s ease;
     transition: left 0.3s ease;
     left: -100%;
+  }
+}
+@media (max-width: 425px) {
+  header .do-top-header .container .do-logo img {
+    width: 80%;
   }
 }
 .do-slider-wrap {
@@ -1061,7 +1114,7 @@ form input::-webkit-input-placeholder {
   font-size: 17px;
   font-weight: 300;
   text-transform: none;
-  line-height: 1;
+  line-height: 1.75rem;
   opacity: 1;
   font-style: italic;
 }
@@ -1071,7 +1124,7 @@ form input::-moz-placeholder {
   font-size: 17px;
   font-weight: 300;
   text-transform: none;
-  line-height: 1;
+  line-height: 1.75rem;
   font-style: italic;
 }
 form input:-ms-input-placeholder {
@@ -1080,7 +1133,7 @@ form input:-ms-input-placeholder {
   font-size: 17px;
   font-weight: 300;
   text-transform: none;
-  line-height: 1;
+  line-height: 1.75rem;
   font-style: italic;
 }
 form input:-moz-placeholder {
@@ -1089,7 +1142,7 @@ form input:-moz-placeholder {
   font-size: 17px;
   font-weight: 300;
   text-transform: none;
-  line-height: 1;
+  line-height: 1.75rem;
   font-style: italic;
 }
 form label {

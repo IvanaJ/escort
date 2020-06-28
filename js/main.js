@@ -48,6 +48,13 @@ $(document).ready(function () {
     return result.split(",");
 }
 
+$('.do-mobile-search').on('click', function () {
+  $("#doOverlay").css('display','block');
+})
+$(".do-overlay-closebtn").on("click", function () {
+  $("#doOverlay").css("display", "none");
+});
+
   /**
    * Range Slider
    * change name value if id or name is changed!!!

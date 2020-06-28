@@ -9,7 +9,7 @@ form {
   color: $grey;
   @include text($weight: 700);
   input {
-    @include input_placeholder($white, 300, 17px, none, 1, 1, italic);
+    @include input_placeholder($white, 300, 17px, none, 1.75rem, 1, italic);
   }
   label {
     @include text(1.5rem, 2.375rem, 700);

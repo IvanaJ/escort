@@ -11,31 +11,61 @@ header {
           background: url("../images/bars.svg") no-repeat;
         }
       }
+      .do-logo {
+        img {
+          width: 100%;
+        }
+      }
 
       .do-search {
-        position: relative;
-        input {
-          @include input_placeholder($white, 300, 17px, none, 1, 1, italic);
-          background: transparent;
-          color: $white;
-          border: unset;
-          border-radius: unset;
-          border-bottom: 1px solid $white;
-          margin-left: 1.875rem;
+        form {
+          @include flex(initial, initial, initial, row, nowrap);
 
-          &:focus {
-            outline: none;
+          input {
+            @include input_placeholder($white, 300, 17px, none, 1, 1, italic);
+            background: transparent;
+            color: $white;
+            border: unset;
+            border-radius: unset;
+            border-bottom: 1px solid $white;
+
+            &:focus {
+              outline: none;
+            }
           }
         }
-        &:before {
+        .do-mobile-search {
+          display: none;
+        }
+      }
+
+      .do-overlay {
+        height: 100%;
+        width: 100%;
+        display: none;
+        position: fixed;
+        z-index: 11;
+        top: 0;
+        left: 0;
+        background-color: rgb(0, 0, 0);
+        background-color: rgba(0, 0, 0, 0.9);
+
+        &-content {
+          position: relative;
+          top: 46%;
+          width: 80%;
+          text-align: center;
+          margin-top: 30px;
+          margin: auto;
+        }
+        &-closebtn {
           content: "";
+          background: url("../images/close_white.svg") no-repeat;
           position: absolute;
-          background: url("../images/search.svg") no-repeat;
-          width: 1.5rem;
-          height: 1.5rem;
-          background-size: contain;
-          left: 0;
-          top: 0.5rem;
+          top: 20px;
+          right: 45px;
+          width: 30px;
+          height: 30px;
         }
       }
     }
@@ -77,8 +107,15 @@ header {
         }
         .do-search {
           order: 3;
+          form {
+            display: none;
+          }
+          .do-mobile-search {
+            display: block;
+          }
         }
         .do-logo {
+          text-align: center;
           order: 2;
         }
       }
@@ -137,6 +174,20 @@ header {
             -moz-transition: left 0.3s ease;
             transition: left 0.3s ease;
             left: -100%;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 425px) {
+  header {
+    .do-top-header {
+      .container {
+        .do-logo {
+          img {
+            width: 80%;
           }
         }
       }

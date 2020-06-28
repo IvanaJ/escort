@@ -25,59 +25,83 @@
 </head>
 
 <body>
-    <header>
-        <div class="do-top-header">
-            <div class="container">
-                <button class="navbar-toggler do-toggler" type="button" data-toggle="collapse"
-                    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                    aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
+<header>
+    <div class="do-top-header">
+        <div class="container">
+            <button class="navbar-toggler do-toggler" type="button" data-toggle="collapse"
+                data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
-                <div class="do-search">
+            <div class="do-search">
+                <form id="doSearchForm">
+                    <img src="images/search.svg">
+                    <input id="do-search" type="text" class="form-control" placeholder="Search">
+                </form>
+                <img class="do-mobile-search" src="images/search.svg">
 
-                    <input type="text" class="form-control" placeholder="Search">
+            </div>
+            <div id="doOverlay" class="do-overlay">
+                <span class="do-overlay-closebtn" title="Close Overlay"></span>
+                <div class="do-overlay-content">
+                    <form action="">
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="form-group">
+                                    <input type="text" class="form-control" id="search" placeholder="Search">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12">
+                                <button type="submit" class="btn btn-pink">Search</button>
+                            </div>
+                        </div>
+                    </form>
                 </div>
-                <div class="do-logo">
-                    <img src="images/logo.png">
-                </div>
+            </div>
 
-                <div class="do-login">
-                    <a href="#" class="btn btn-white"> Login</a>
-                </div>
+            <div class="do-logo">
+                <img src="images/logo.png">
+            </div>
+
+            <div class="do-login">
+                <a href="#" class="btn btn-white"> Login</a>
             </div>
         </div>
+    </div>
 
-        <nav class="navbar navbar-expand-lg ">
+    <nav class="navbar navbar-expand-lg ">
 
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <span class="do-menu-close"></span>
-                <ul class="navbar-nav mr-auto">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="#">Novità<span class="sr-only">(current)</span></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Donne</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#"> Trans/Tv </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Uomini</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Massaggi</a>
-                    </li>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <span class="do-menu-close"></span>
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Novità<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Donne</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#"> Trans/Tv </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Uomini</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Massaggi</a>
+                </li>
 
 
-                </ul>
-                <div class="do-login">
-                    <a href="#" class="btn btn-pink"> Login</a>
-                </div>
-
+            </ul>
+            <div class="do-login">
+                <a href="#" class="btn btn-pink"> Login</a>
             </div>
-        </nav>
-    </header>
+
+        </div>
+    </nav>
+</header>
     <main>
         <section class="do-payment">
             <div class="container">
