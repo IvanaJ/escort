@@ -1513,7 +1513,7 @@ hr {
   font-size: 24px;
 }
 
-section.do-register, section.do-payment {
+section.do-register, section.do-payment, section.do-plans {
   margin: 3rem 0;
 }
 
@@ -1522,6 +1522,75 @@ section.do-register, section.do-payment {
   font-style: italic;
   font-size: 1.0625rem;
   line-height: 2.375rem;
+}
+
+.do-plans .row {
+  padding: 1rem;
+}
+.do-plans-monthly {
+  background-image: linear-gradient(to left, #EF2F7F, #781840);
+}
+.do-plans-monthly div.col-lg-6:first-child, .do-plans-monthly div.col-lg-6:nth-child(2) {
+  margin-bottom: 1rem;
+}
+.do-plans-monthly .do-plan {
+  border: 2px solid #D6799E !important;
+}
+.do-plans .do-plan {
+  background: #ffffff;
+  border: 2px solid #B96788;
+  width: 280px;
+}
+.do-plans .do-plan.selected {
+  background: #5C5C5C;
+  color: #ffffff;
+}
+.do-plans .do-plan-wrap {
+  padding: 2rem 1rem;
+}
+.do-plans .do-plan-wrap h1 {
+  font-size: 2.1875rem;
+  line-height: 2rem;
+  font-weight: 700;
+}
+.do-plans .do-plan-wrap-prices {
+  display: -webkit-box;
+  /* OLD - iOS 6-, Safari 3.1-6 */
+  display: -moz-box;
+  /* OLD - Firefox 19- (buggy but mostly works) */
+  display: -ms-flexbox;
+  /* TWEENER - IE 10 */
+  display: -webkit-flex;
+  /* NEW - Chrome */
+  display: flex;
+  /* NEW, Spec - Opera 12.1, Firefox 20+ */
+  justify-content: space-around;
+  -ms-justify-content: space-around;
+  align-content: space-around;
+  align-items: center;
+  -ms-flex-align: center;
+  flex-direction: row;
+  -ms-flex-direction: row;
+  flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  padding: 2rem 0 0 0;
+}
+.do-plans .do-plan-wrap-prices span:first-child {
+  font-size: 1.75rem;
+  line-height: 2.9375rem;
+  font-weight: 300;
+  text-decoration: line-through;
+}
+.do-plans .do-plan-wrap-prices span:nth-child(2) {
+  font-size: 2.25rem;
+  line-height: 2.9375rem;
+  font-weight: 900;
+  color: #EF2F7F;
+}
+.do-plans .do-plan-wrap-prices span:nth-child(3) {
+  font-size: 1.75rem;
+  line-height: 2.9375rem;
+  font-weight: 900;
 }
 
 @media (min-width: 1200px) {
@@ -1546,6 +1615,21 @@ section.do-register, section.do-payment {
   }
   main .do-register form .row:nth-of-type(4) {
     margin-bottom: 2.75rem;
+  }
+  main .do-plans .row .col-lg-6 {
+    padding: 1rem;
+  }
+  main .do-plans .row .do-plan {
+    margin: 0 auto;
+  }
+  main .do-plans .row .do-plan.float-right {
+    float: unset !important;
+  }
+  main .do-plans-monthly {
+    background-image: linear-gradient(to top, #EF2F7F, #781840);
+  }
+  main .do-plans-monthly div.col-lg-6:first-child, main .do-plans-monthly div.col-lg-6:nth-child(2) {
+    margin-bottom: unset;
   }
 }
 

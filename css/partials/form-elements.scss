@@ -35,6 +35,7 @@ form {
       }
     }
   }
+
   .form-group {
     .form-control,
     .custom-select {
@@ -45,9 +46,9 @@ form {
       color: $grey;
     }
     .custom-select {
-      background: $white url("../images/arrow.svg") no-repeat right 1.3rem
-        center/16px 10px;
+      background: $white url("../images/arrow.svg") no-repeat right 1.3rem center/16px 10px;
     }
+
     // Radio & checkbox
     .custom-control {
       padding: 0;

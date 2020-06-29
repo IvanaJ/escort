@@ -47,7 +47,7 @@ body {
 *:focus {
   outline: none !important;
 }
-*:visited{
+*:visited {
   outline: none !important;
 }
 
@@ -90,8 +90,8 @@ hr {
 .m-0-auto {
   margin: 0 auto;
 }
-.m-2-auto{
-  margin:2rem auto;
+.m-2-auto {
+  margin: 2rem auto;
 }
 // Buttons
 .btn {
@@ -146,7 +146,8 @@ hr {
 }
 section {
   &.do-register,
-  &.do-payment {
+  &.do-payment,
+  &.do-plans {
     margin: 3rem 0;
   }
 }
@@ -157,6 +158,60 @@ section {
     font-style: italic;
     font-size: 1.0625rem;
     line-height: 2.375rem;
+  }
+}
+// Plans Page
+.do-plans {
+  .row {
+    padding: 1rem;
+  }
+  &-monthly {
+    background-image: linear-gradient(to left, $pink, $darkpink);
+    div {
+      &.col-lg-6 {
+        &:first-child,
+        &:nth-child(2) {
+          margin-bottom: 1rem;
+        }
+      }
+    }
+
+    .do-plan {
+      border: 2px solid $pinkdimmedlight !important;
+    }
+  }
+  .do-plan {
+    background: $white;
+    border: 2px solid $pinkdimmed;
+    width: 280px;
+    &.selected {
+      background: $grey;
+      color: $white;
+    }
+    &-wrap {
+      padding: 2rem 1rem;
+      h1 {
+        @include text(2.1875rem, 2rem, 700);
+      }
+
+      &-prices {
+        @include flex(space-around, space-around, center, row, nowrap);
+        padding: 2rem 0 0 0;
+        span {
+          &:first-child {
+            @include text(1.75rem, 2.9375rem, 300);
+            text-decoration: line-through;
+          }
+          &:nth-child(2) {
+            @include text(2.25rem, 2.9375rem, 900);
+            color: $pink;
+          }
+          &:nth-child(3) {
+            @include text(1.75rem, 2.9375rem, 900);
+          }
+        }
+      }
+    }
   }
 }
 
@@ -176,6 +231,7 @@ section {
 @media (max-width: 768px) {
   main {
     margin-top: 1.5rem;
+    // Register Page
     .do-register {
       form {
         .row {
@@ -188,6 +244,31 @@ section {
           }
           &:nth-of-type(4) {
             margin-bottom: 2.75rem;
+          }
+        }
+      }
+    }
+    // Plans Page
+    .do-plans {
+      .row {
+        .col-lg-6 {
+          padding: 1rem;
+        }
+        .do-plan {
+          margin: 0 auto;
+          &.float-right {
+            float: unset !important;
+          }
+        }
+      }
+      &-monthly {
+        background-image: linear-gradient(to top, $pink, $darkpink);
+        div {
+          &.col-lg-6 {
+            &:first-child,
+            &:nth-child(2) {
+              margin-bottom: unset;
+            }
           }
         }
       }
