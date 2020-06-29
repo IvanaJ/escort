@@ -53,7 +53,8 @@
     }
   }
 
-   // Plans Page
+  @media(max-width:768px){
+     // Plans Page
    .do-plans {
     .row {
       .col-lg-6 {
@@ -77,4 +78,5 @@
         }
       }
     }
+  }
   }

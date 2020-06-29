@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="56" height="56" viewBox="0 0 56 56">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Rectangle_463" data-name="Rectangle 463" width="38" height="34" transform="translate(0 0)" fill="none"/>
+    </clipPath>
+  </defs>
+  <g id="Group_878" data-name="Group 878" transform="translate(-3365 -354)">
+    <circle id="Ellipse_92" data-name="Ellipse 92" cx="28" cy="28" r="28" transform="translate(3365 354)" fill="#fff"/>
+    <g id="Vector_Smart_Object" data-name="Vector Smart Object" transform="translate(3374.991 366.387)">
+      <g id="Group_802" data-name="Group 802" transform="translate(0.009 -0.387)">
+        <g id="Group_801" data-name="Group 801" transform="translate(0 0)" clip-path="url(#clip-path)">
+          <path id="Path_682" data-name="Path 682" d="M33.518,4.733H1.105a1.12,1.12,0,0,0,0,2.239H33.518a1.12,1.12,0,0,0,0-2.239" transform="translate(1.648 0.962)" fill="#5c5c5c"/>
+          <path id="Path_683" data-name="Path 683" d="M33.518,17.462H1.105a1.12,1.12,0,0,0,0,2.239H33.518a1.12,1.12,0,0,0,0-2.239" transform="translate(1.648 -1.751)" fill="#5c5c5c"/>
+          <path id="Path_684" data-name="Path 684" d="M33.518,30.192H1.105a1.12,1.12,0,0,0,0,2.239H33.518a1.12,1.12,0,0,0,0-2.239" transform="translate(1.648 -4.464)" fill="#5c5c5c"/>
+          <path id="Path_685" data-name="Path 685" d="M17.1,5.046a4.192,4.192,0,1,1-8.383,0,4.192,4.192,0,1,1,8.383,0" transform="translate(-0.209 1.8)" fill="#fff"/>
+          <path id="Path_686" data-name="Path 686" d="M17.1,5.046a4.192,4.192,0,1,1-8.383,0,4.192,4.192,0,1,1,8.383,0Z" transform="translate(-0.209 1.8)" fill="#ef2f7f" stroke="#fff" stroke-miterlimit="10" stroke-width="1.59"/>
+          <path id="Path_687" data-name="Path 687" d="M17.1,30.654a4.192,4.192,0,1,1-4.192-4.246A4.219,4.219,0,0,1,17.1,30.654" transform="translate(-0.209 -3.657)" fill="#ef2f7f" stroke="#fff" stroke-width="1"/>
+          <path id="Path_689" data-name="Path 689" d="M34.3,17.617a4.192,4.192,0,1,1-4.192-4.246A4.219,4.219,0,0,1,34.3,17.617" transform="translate(-3.875 -0.879)" fill="#fff"/>
+          <path id="Path_690" data-name="Path 690" d="M34.3,17.617a4.192,4.192,0,1,1-4.192-4.246A4.219,4.219,0,0,1,34.3,17.617Z" transform="translate(-3.875 -0.879)" fill="#ef2f7f" stroke="#fff" stroke-miterlimit="10" stroke-width="1.59"/>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

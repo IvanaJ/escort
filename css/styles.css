@@ -1511,22 +1511,23 @@ form .do-check .custom-checkbox .custom-control-input:checked ~ .custom-control-
   font-weight: 900;
 }
 
-.do-plans .row .col-lg-6 {
-  padding: 1rem;
+@media (max-width: 768px) {
+  .do-plans .row .col-lg-6 {
+    padding: 1rem;
+  }
+  .do-plans .row .do-plan {
+    margin: 0 auto;
+  }
+  .do-plans .row .do-plan.float-right {
+    float: unset !important;
+  }
+  .do-plans-monthly {
+    background-image: linear-gradient(to top, #EF2F7F, #781840);
+  }
+  .do-plans-monthly div.col-lg-6:first-child, .do-plans-monthly div.col-lg-6:nth-child(2) {
+    margin-bottom: unset;
+  }
 }
-.do-plans .row .do-plan {
-  margin: 0 auto;
-}
-.do-plans .row .do-plan.float-right {
-  float: unset !important;
-}
-.do-plans-monthly {
-  background-image: linear-gradient(to top, #EF2F7F, #781840);
-}
-.do-plans-monthly div.col-lg-6:first-child, .do-plans-monthly div.col-lg-6:nth-child(2) {
-  margin-bottom: unset;
-}
-
 .do-register .do-conditions {
   font-weight: 300;
   font-style: italic;
