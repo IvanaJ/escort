@@ -1,0 +1,20 @@
+
+.do-banner {
+    background: url("../images/banner.png") no-repeat;
+    background-size: cover;
+    background-color: $p;
+    background-position: center;
+    width: 100%;
+    text-align: center;
+  
+    div {
+      padding: 3.3rem 0;
+      h1 {
+        font-size: 36px;
+        font-weight: 700;
+      }
+      p {
+        font-size: 24px;
+      }
+    }
+  }

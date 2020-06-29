@@ -1,0 +1,89 @@
+// Map Page
+.do-map {
+    h1 {
+        .do-map-icon {
+            position: relative;
+            &:before {
+                content: "";
+                position: absolute;
+                background: url("../images/map.svg") no-repeat;
+                width: 40px;
+                height: 40px;
+                left: -2.5rem;
+            }
+        }
+    }
+    .do-location-wrap {
+        width: 50%;
+        margin: 0 auto;
+        &:before {
+            top: 0.5rem;
+        }
+    }
+}
+#map {
+    margin-bottom: 2rem;
+    .do-gallery-items {
+        padding: 10px;
+        width: 180px;
+        .do-gallery-item {
+            margin: 0 auto;
+        }
+
+        .do-item-info {
+            .do-item-info-top {
+                .do-left-wrap {
+                    h1 {
+                        @include text(1.125rem, 2rem, 700);
+                    }
+                    p {
+                        @include text(0.875rem, 1.1875rem, 300);
+                    }
+                }
+            }
+        }
+        .do-top {
+            border-top: 3.375rem solid #ef2f7f;
+            border-left: 3.375rem solid transparent;
+
+            &:before {
+                @include text($size: 1rem);
+                left: -2rem;
+                top: -3.75rem;
+            }
+        }
+        .do-profile {
+            text-align: center;
+            a {
+                @include text(0.875rem, 2.375rem, 700);
+
+                color: $grey;
+                text-align: center;
+                text-decoration: underline;
+            }
+        }
+    }
+    .gm-style {
+        .gm-style-iw-c {
+            border-radius: unset;
+            padding: 0;
+        }
+        .gm-style-iw-d {
+            overflow: hidden !important;
+        }
+        .gm-ui-hover-effect {
+            top: -9px !important;
+            right: -9px !important;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    // Map Page
+    .do-map {
+        .do-location-wrap {
+            width: 100%;
+            margin: 0 auto;
+        }
+    }
+}

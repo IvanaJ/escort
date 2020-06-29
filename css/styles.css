@@ -879,7 +879,6 @@ footer .container .do-social:before {
   width: 40%;
 }
 .do-filter .container form .form-group:nth-child(2) {
-  position: relative;
   width: 30%;
 }
 .do-filter .container form .form-group:nth-child(3) {
@@ -1330,6 +1329,9 @@ form .do-check .custom-checkbox .custom-control-input:checked ~ .custom-control-
   color: #5C5C5C;
 }
 
+.do-location-wrap {
+  position: relative;
+}
 .do-location-wrap::before {
   content: "";
   position: absolute;
@@ -1363,6 +1365,205 @@ form .do-check .custom-checkbox .custom-control-input:checked ~ .custom-control-
     width: 125px;
   }
 }
+.do-map h1 .do-map-icon {
+  position: relative;
+}
+.do-map h1 .do-map-icon:before {
+  content: "";
+  position: absolute;
+  background: url("../images/map.svg") no-repeat;
+  width: 40px;
+  height: 40px;
+  left: -2.5rem;
+}
+.do-map .do-location-wrap {
+  width: 50%;
+  margin: 0 auto;
+}
+.do-map .do-location-wrap:before {
+  top: 0.5rem;
+}
+
+#map {
+  margin-bottom: 2rem;
+}
+#map .do-gallery-items {
+  padding: 10px;
+  width: 180px;
+}
+#map .do-gallery-items .do-gallery-item {
+  margin: 0 auto;
+}
+#map .do-gallery-items .do-item-info .do-item-info-top .do-left-wrap h1 {
+  font-size: 1.125rem;
+  line-height: 2rem;
+  font-weight: 700;
+}
+#map .do-gallery-items .do-item-info .do-item-info-top .do-left-wrap p {
+  font-size: 0.875rem;
+  line-height: 1.1875rem;
+  font-weight: 300;
+}
+#map .do-gallery-items .do-top {
+  border-top: 3.375rem solid #ef2f7f;
+  border-left: 3.375rem solid transparent;
+}
+#map .do-gallery-items .do-top:before {
+  font-size: 1rem;
+  left: -2rem;
+  top: -3.75rem;
+}
+#map .do-gallery-items .do-profile {
+  text-align: center;
+}
+#map .do-gallery-items .do-profile a {
+  font-size: 0.875rem;
+  line-height: 2.375rem;
+  font-weight: 700;
+  color: #5C5C5C;
+  text-align: center;
+  text-decoration: underline;
+}
+#map .gm-style .gm-style-iw-c {
+  border-radius: unset;
+  padding: 0;
+}
+#map .gm-style .gm-style-iw-d {
+  overflow: hidden !important;
+}
+#map .gm-style .gm-ui-hover-effect {
+  top: -9px !important;
+  right: -9px !important;
+}
+
+@media (max-width: 768px) {
+  .do-map .do-location-wrap {
+    width: 100%;
+    margin: 0 auto;
+  }
+}
+.do-plans .row {
+  padding: 1rem;
+}
+.do-plans-monthly {
+  background-image: linear-gradient(to left, #EF2F7F, #781840);
+}
+.do-plans-monthly div.col-lg-6:first-child, .do-plans-monthly div.col-lg-6:nth-child(2) {
+  margin-bottom: 1rem;
+}
+.do-plans-monthly .do-plan {
+  border: 2px solid #D6799E !important;
+}
+.do-plans .do-plan {
+  background: #ffffff;
+  border: 2px solid #B96788;
+  width: 280px;
+}
+.do-plans .do-plan.selected {
+  background: #5C5C5C;
+  color: #ffffff;
+}
+.do-plans .do-plan-wrap {
+  padding: 2rem 1rem;
+}
+.do-plans .do-plan-wrap h1 {
+  font-size: 2.1875rem;
+  line-height: 2rem;
+  font-weight: 700;
+}
+.do-plans .do-plan-wrap-prices {
+  display: -webkit-box;
+  /* OLD - iOS 6-, Safari 3.1-6 */
+  display: -moz-box;
+  /* OLD - Firefox 19- (buggy but mostly works) */
+  display: -ms-flexbox;
+  /* TWEENER - IE 10 */
+  display: -webkit-flex;
+  /* NEW - Chrome */
+  display: flex;
+  /* NEW, Spec - Opera 12.1, Firefox 20+ */
+  justify-content: space-around;
+  -ms-justify-content: space-around;
+  align-content: space-around;
+  align-items: center;
+  -ms-flex-align: center;
+  flex-direction: row;
+  -ms-flex-direction: row;
+  flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  padding: 2rem 0 0 0;
+}
+.do-plans .do-plan-wrap-prices span:first-child {
+  font-size: 1.75rem;
+  line-height: 2.9375rem;
+  font-weight: 300;
+  text-decoration: line-through;
+}
+.do-plans .do-plan-wrap-prices span:nth-child(2) {
+  font-size: 2.25rem;
+  line-height: 2.9375rem;
+  font-weight: 900;
+  color: #EF2F7F;
+}
+.do-plans .do-plan-wrap-prices span:nth-child(3) {
+  font-size: 1.75rem;
+  line-height: 2.9375rem;
+  font-weight: 900;
+}
+
+.do-plans .row .col-lg-6 {
+  padding: 1rem;
+}
+.do-plans .row .do-plan {
+  margin: 0 auto;
+}
+.do-plans .row .do-plan.float-right {
+  float: unset !important;
+}
+.do-plans-monthly {
+  background-image: linear-gradient(to top, #EF2F7F, #781840);
+}
+.do-plans-monthly div.col-lg-6:first-child, .do-plans-monthly div.col-lg-6:nth-child(2) {
+  margin-bottom: unset;
+}
+
+.do-register .do-conditions {
+  font-weight: 300;
+  font-style: italic;
+  font-size: 1.0625rem;
+  line-height: 2.375rem;
+}
+
+@media (max-width: 768px) {
+  .do-register form .row:first-of-type, .do-register form .row:nth-of-type(2) {
+    margin-bottom: 2.75rem;
+  }
+  .do-register form .row:nth-of-type(3) {
+    margin-bottom: 3.125rem;
+  }
+  .do-register form .row:nth-of-type(4) {
+    margin-bottom: 2.75rem;
+  }
+}
+.do-banner {
+  background: url("../images/banner.png") no-repeat;
+  background-size: cover;
+  background-color: #FA2E7F;
+  background-position: center;
+  width: 100%;
+  text-align: center;
+}
+.do-banner div {
+  padding: 3.3rem 0;
+}
+.do-banner div h1 {
+  font-size: 36px;
+  font-weight: 700;
+}
+.do-banner div p {
+  font-size: 24px;
+}
+
 html {
   overflow-x: hidden;
 }
@@ -1494,103 +1695,8 @@ hr {
   border: 2px solid #B4B4B4;
 }
 
-.do-banner {
-  background: url("../images/banner.png") no-repeat;
-  background-size: cover;
-  background-color: #FA2E7F;
-  background-position: center;
-  width: 100%;
-  text-align: center;
-}
-.do-banner div {
-  padding: 3.3rem 0;
-}
-.do-banner div h1 {
-  font-size: 36px;
-  font-weight: 700;
-}
-.do-banner div p {
-  font-size: 24px;
-}
-
-section.do-register, section.do-payment, section.do-plans {
+section.do-register, section.do-payment, section.do-plans, section.do-map {
   margin: 3rem 0;
-}
-
-.do-register .do-conditions {
-  font-weight: 300;
-  font-style: italic;
-  font-size: 1.0625rem;
-  line-height: 2.375rem;
-}
-
-.do-plans .row {
-  padding: 1rem;
-}
-.do-plans-monthly {
-  background-image: linear-gradient(to left, #EF2F7F, #781840);
-}
-.do-plans-monthly div.col-lg-6:first-child, .do-plans-monthly div.col-lg-6:nth-child(2) {
-  margin-bottom: 1rem;
-}
-.do-plans-monthly .do-plan {
-  border: 2px solid #D6799E !important;
-}
-.do-plans .do-plan {
-  background: #ffffff;
-  border: 2px solid #B96788;
-  width: 280px;
-}
-.do-plans .do-plan.selected {
-  background: #5C5C5C;
-  color: #ffffff;
-}
-.do-plans .do-plan-wrap {
-  padding: 2rem 1rem;
-}
-.do-plans .do-plan-wrap h1 {
-  font-size: 2.1875rem;
-  line-height: 2rem;
-  font-weight: 700;
-}
-.do-plans .do-plan-wrap-prices {
-  display: -webkit-box;
-  /* OLD - iOS 6-, Safari 3.1-6 */
-  display: -moz-box;
-  /* OLD - Firefox 19- (buggy but mostly works) */
-  display: -ms-flexbox;
-  /* TWEENER - IE 10 */
-  display: -webkit-flex;
-  /* NEW - Chrome */
-  display: flex;
-  /* NEW, Spec - Opera 12.1, Firefox 20+ */
-  justify-content: space-around;
-  -ms-justify-content: space-around;
-  align-content: space-around;
-  align-items: center;
-  -ms-flex-align: center;
-  flex-direction: row;
-  -ms-flex-direction: row;
-  flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  padding: 2rem 0 0 0;
-}
-.do-plans .do-plan-wrap-prices span:first-child {
-  font-size: 1.75rem;
-  line-height: 2.9375rem;
-  font-weight: 300;
-  text-decoration: line-through;
-}
-.do-plans .do-plan-wrap-prices span:nth-child(2) {
-  font-size: 2.25rem;
-  line-height: 2.9375rem;
-  font-weight: 900;
-  color: #EF2F7F;
-}
-.do-plans .do-plan-wrap-prices span:nth-child(3) {
-  font-size: 1.75rem;
-  line-height: 2.9375rem;
-  font-weight: 900;
 }
 
 @media (min-width: 1200px) {
@@ -1606,30 +1712,6 @@ section.do-register, section.do-payment, section.do-plans {
 @media (max-width: 768px) {
   main {
     margin-top: 1.5rem;
-  }
-  main .do-register form .row:first-of-type, main .do-register form .row:nth-of-type(2) {
-    margin-bottom: 2.75rem;
-  }
-  main .do-register form .row:nth-of-type(3) {
-    margin-bottom: 3.125rem;
-  }
-  main .do-register form .row:nth-of-type(4) {
-    margin-bottom: 2.75rem;
-  }
-  main .do-plans .row .col-lg-6 {
-    padding: 1rem;
-  }
-  main .do-plans .row .do-plan {
-    margin: 0 auto;
-  }
-  main .do-plans .row .do-plan.float-right {
-    float: unset !important;
-  }
-  main .do-plans-monthly {
-    background-image: linear-gradient(to top, #EF2F7F, #781840);
-  }
-  main .do-plans-monthly div.col-lg-6:first-child, main .do-plans-monthly div.col-lg-6:nth-child(2) {
-    margin-bottom: unset;
   }
 }
 

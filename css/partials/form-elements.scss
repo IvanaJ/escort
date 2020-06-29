@@ -238,6 +238,7 @@ form {
 }
 // Location input
 .do-location-wrap {
+  position: relative;
   &::before {
     content: "";
     position: absolute;
