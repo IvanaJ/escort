@@ -990,9 +990,10 @@ footer .container .do-social:before {
   -ms-flex-direction: row;
   flex-wrap: nowrap;
   -ms-flex-wrap: nowrap;
+  width: 100%;
 }
-.do-filter-modal-filters div {
-  margin: 1rem;
+.do-filter-modal-filters .custom-control {
+  margin: 0 !important;
 }
 .do-filter-modal-range-wrap {
   margin-bottom: 2.5rem;
@@ -1001,11 +1002,6 @@ footer .container .do-social:before {
   margin: 0 auto;
 }
 
-@media (max-width: 1440px) {
-  .do-filter-modal-filters div {
-    margin: 1rem 0.5rem;
-  }
-}
 @media (max-width: 1024px) {
   .do-filter .container form {
     display: -webkit-box;
@@ -1077,8 +1073,8 @@ footer .container .do-social:before {
     flex-wrap: wrap;
     -ms-flex-wrap: wrap;
   }
-  .do-filter-modal-filters div {
-    margin: 1rem;
+  .do-filter-modal-filters .custom-control {
+    margin: 0.5rem 0 !important;
   }
   .do-filter-modal-range-wrap div {
     margin-bottom: 2rem;
@@ -1094,9 +1090,6 @@ footer .container .do-social:before {
   }
   .do-filter-modal-title img {
     width: 35px;
-  }
-  .do-filter-modal-filters div {
-    margin: 1rem 0.5rem;
   }
 }
 .form-control:focus {
@@ -1185,12 +1178,14 @@ form .form-group .custom-select {
 }
 form .form-group .custom-control {
   padding: 0;
+  width: 100%;
+  margin: 0 0.5rem;
 }
 form .form-group .custom-control .custom-control-label {
   font-size: 1rem;
   line-height: 2.375rem;
   font-weight: 700;
-  width: 155px;
+  width: 100%;
   height: 50px;
   left: 0;
   padding: 0.3rem;
@@ -1201,7 +1196,7 @@ form .form-group .custom-control .custom-control-label {
   text-align: center;
 }
 form .form-group .custom-control .custom-control-label:before {
-  width: 155px;
+  width: 100%;
   height: 50px;
   border-radius: 1.5625rem;
   left: 0;
@@ -1343,11 +1338,6 @@ form .do-check .custom-checkbox .custom-control-input:checked ~ .custom-control-
   top: 3.5rem;
 }
 
-@media (max-width: 1440px) {
-  form .form-group .custom-control {
-    padding: 0 0.2rem;
-  }
-}
 @media (max-width: 768px) {
   form label {
     font-size: 1.25rem;

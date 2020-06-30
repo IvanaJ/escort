@@ -216,6 +216,277 @@
 
     </footer>
 
+     <!-- Filters Modal -->
+     <div class="modal fade do-filter-modal" id="do-filter-modal" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+
+
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true"> Chiudi </span>
+                </button>
+
+                <div class="modal-body">
+
+                    <div class="do-filter-modal-title">
+                        <span>Ricerca avanzata</span>
+                        <img width="50" height="50" src="images/filters.svg" alt="" />
+
+                    </div>
+                    <form>
+
+                        <div class="row">
+                            <div class="col-lg-6 col-sm-12">
+                                <div class="form-group">
+                                    <select class="custom-select custom-select-lg">
+                                        <option name="donne">Etnia</option>
+                                        <option name="trans/tv">Etnia</option>
+                                        <option name="uomini">Etnia</option>
+                                    </select>
+
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-sm-12">
+                                <div class="form-group">
+                                    <select class="custom-select custom-select-lg">
+                                        <option name="donne">Nazionalità</option>
+                                        <option name="trans/tv">Nazionalità</option>
+                                        <option name="uomini">Nazionalità</option>
+                                    </select>
+
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="row do-filter-modal-range-wrap">
+                            <div class="col-lg-4 col-sm-12">
+                                <div class="form-group">
+                                    <label for="age">Età</label>
+
+                                    <div id="ageSlider" class="do-range range-slider" data-range="true" data-max="1000"
+                                        data-values="[100, 1000]">
+                                        <input type="hidden" name="age_from" readonly>
+                                        <input type="hidden" name="age_to" readonly>
+                                        <div class="ui-slider-handle custom-handle-from"></div>
+                                        <div class="ui-slider-handle custom-handle-to"></div>
+                                    </div>
+
+
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-sm-12">
+                                <div class="form-group">
+                                    <label for="height">Altezza</label>
+
+
+
+                                    <div id="heightSlider" class="do-range range-slider" data-range="true"
+                                        data-max="1000" data-values="[100, 1000]">
+                                        <input type="hidden" name="height_from" readonly>
+                                        <input type="hidden" name="height_to" readonly>
+                                        <div class="ui-slider-handle custom-handle-from"></div>
+                                        <div class="ui-slider-handle custom-handle-to"></div>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-sm-12">
+                                <div class="form-group">
+                                    <label for="weight">Peso</label>
+
+
+                                    <div id="weightSlider" class="do-range range-slider" data-range="true"
+                                        data-max="1000" data-values="[100, 1000]">
+                                        <input type="hidden" name="weight_from" readonly>
+                                        <input type="hidden" name="weight_to" readonly>
+                                        <div class="ui-slider-handle custom-handle-from"></div>
+                                        <div class="ui-slider-handle custom-handle-to"></div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-6 col-sm-12">
+                                <div class="form-group">
+                                    <select class="custom-select custom-select-lg">
+                                        <option name="donne">Colore capelli</option>
+                                        <option name="trans/tv">Colore capelli</option>
+                                        <option name="uomini">Colore capelli</option>
+                                    </select>
+
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-sm-12">
+                                <div class="form-group">
+                                    <select class="custom-select custom-select-lg">
+                                        <option name="donne">Lunghezza capelli</option>
+                                        <option name="trans/tv">Lunghezza capelli</option>
+                                        <option name="uomini">Lunghezza capelli</option>
+                                    </select>
+
+                                </div>
+                            </div>
+
+                        </div>
+
+
+                        <div class="row">
+                            <div class="col-lg-6 col-sm-12">
+                                <div class="form-group">
+                                    <select class="custom-select custom-select-lg">
+                                        <option name="donne">Colore occhi</option>
+                                        <option name="trans/tv">Colore occhi</option>
+                                        <option name="uomini">Colore occhi</option>
+                                    </select>
+
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-sm-12">
+                                <div class="form-group">
+                                    <select class="custom-select custom-select-lg">
+                                        <option name="donne">Seno</option>
+                                        <option name="trans/tv">Seno</option>
+                                        <option name="uomini">Seno</option>
+                                    </select>
+
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="row">
+
+                            <div class="col-lg-6 col-sm-12">
+                                <div class="form-group">
+                                    <select class="custom-select custom-select-lg">
+                                        <option name="donne">Taglia coppa</option>
+                                        <option name="trans/tv">Taglia coppa</option>
+                                        <option name="uomini">Taglia coppa</option>
+                                    </select>
+
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-sm-12">
+                                <div class="form-group">
+                                    <select class="custom-select custom-select-lg">
+                                        <option name="donne">Taglia abito </option>
+                                        <option name="trans/tv">Taglia abito </option>
+                                        <option name="uomini">Taglia abito </option>
+                                    </select>
+
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="row">
+
+                            <div class="col-lg-6 col-sm-12">
+                                <div class="form-group">
+                                    <select class="custom-select custom-select-lg">
+                                        <option name="donne">Numero scarpe</option>
+                                        <option name="trans/tv">Numero scarpe</option>
+                                        <option name="uomini">Numero scarpe</option>
+                                    </select>
+
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-sm-12">
+                                <div class="form-group">
+                                    <select class="custom-select custom-select-lg">
+                                        <option name="donne">Peli pubici</option>
+                                        <option name="trans/tv">Peli pubici</option>
+                                        <option name="uomini">Peli pubici</option>
+                                    </select>
+
+                                </div>
+                            </div>
+
+                        </div>
+                        <hr>
+
+                        <div class="row">
+                            <div class="col-lg-4 col-sm-12">
+                                <div class="form-group">
+                                    <select class="custom-select custom-select-lg">
+                                        <option name="donne">Orientamento sessuale</option>
+                                        <option name="trans/tv">Orientamento sessuale</option>
+                                        <option name="uomini">Orientamento sessuale</option>
+                                    </select>
+
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-sm-12">
+                                <div class="form-group">
+                                    <select class="custom-select custom-select-lg">
+                                        <option name="donne">Disponibile per</option>
+                                        <option name="trans/tv">Disponibile per</option>
+                                        <option name="uomini">Disponibile per</option>
+                                    </select>
+
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-sm-12">
+                                <div class="form-group">
+                                    <select class="custom-select custom-select-lg">
+                                        <option name="donne">Servizi offerti</option>
+                                        <option name="trans/tv">Servizi offerti</option>
+                                        <option name="uomini">Servizi offerti</option>
+                                    </select>
+
+                                </div>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="row">
+                            <div class="form-group do-filter-modal-filters">
+                                <div class="col-lg-3 col-sm-6 col-6">
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" name="tags" value="Fuma" id="fuma" class="custom-control-input">
+                                        <label class="custom-control-label" for="fuma">Fuma</label>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-sm-6 col-6">
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" name="tags" value="Beve" id="beve" class="custom-control-input">
+                                        <label class="custom-control-label" for="beve">Beve</label>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-sm-6 col-6">
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" name="tags" value="Tatuaggi" id="tatuaggi"
+                                            class="custom-control-input">
+                                        <label class="custom-control-label" for="tatuaggi">Tatuaggi</label>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-sm-6 col-6">
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" name="tags" value="Piercing" id="piercing"
+                                            class="custom-control-input">
+                                        <label class="custom-control-label" for="piercing">Piercing</label>
+                                    </div>
+                                </div>
+                           
+                            </div>
+                        </div>
+                       
+                        <hr>
+                        <div class="row do-filter-modal-btn">
+                            <button type="submit" class="btn btn-pink">Applica filtri</button>
+                        </div>
+
+                    </form>
+
+
+
+
+
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
 </body>
 
 

@@ -1,5 +1,6 @@
 $(document).ready(function () {
 
+  // Slider
   $('#do-slider').slick({
     dots: true,
     infinite: false,
@@ -38,9 +39,18 @@ $(document).ready(function () {
     ]
   });
 
+  // Menu
   $('.do-menu-close').on('click', function () {
     $('.navbar-collapse').collapse('hide');
   });
+  $('.do-mobile-search').on('click', function () {
+    $("#doOverlay").css('display', 'block');
+  })
+  $(".do-overlay-closebtn").on("click", function () {
+    $("#doOverlay").css("display", "none");
+  });
+
+  // Plan
   $('.do-plan').on('click', function () {
     var plan = $(this).attr('data-val');
     $(this).addClass('selected');
@@ -53,13 +63,6 @@ $(document).ready(function () {
     var result = string.replace(/([A-Z]+)/g, ",$1").replace(/^,/, "");
     return result.split(",");
   }
-
-  $('.do-mobile-search').on('click', function () {
-    $("#doOverlay").css('display', 'block');
-  })
-  $(".do-overlay-closebtn").on("click", function () {
-    $("#doOverlay").css("display", "none");
-  });
 
   /**
    * Range Slider

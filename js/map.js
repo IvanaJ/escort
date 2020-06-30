@@ -3,6 +3,49 @@
 var geocoder;
 var map;
 
+function LeftControl(controlDiv, map) {
+    // Set CSS for the control border.
+    var controlUI = document.createElement("div");
+    controlUI.id = "doListView";
+    controlUI.style.cursor = "pointer";
+    controlUI.style.margin = "22px";
+    controlUI.style.width = "70px";
+    controlUI.style.height = "70px";
+    controlDiv.appendChild(controlUI);
+    // Set CSS for the control interior. 
+    var controlIcon = document.createElement("div");
+    controlIcon.style.background = "url('images/listview.svg') no-repeat center";
+    controlIcon.style.width = "70px";
+    controlIcon.style.height = "70px";
+    controlUI.appendChild(controlIcon);
+    // Setup the click event listeners
+    controlUI.addEventListener("click", function () {
+        // Go to list view
+        window.location.href = 'ricerca.html';
+    });
+}
+
+function RightControl(controlDiv, map) {
+    // Set CSS for the control border.
+    var controlUI = document.createElement("div");
+    controlUI.id = "doFilterMap";
+    controlUI.style.cursor = "pointer";
+    controlUI.style.margin = "22px";
+    controlUI.style.width = "70px";
+    controlUI.style.height = "70px";
+    controlDiv.appendChild(controlUI);
+    // Set CSS for the control interior. 
+    var controlIcon = document.createElement("div");
+    controlIcon.style.background = "url('images/filter-btn.svg') no-repeat center";
+    controlIcon.style.width = "70px";
+    controlIcon.style.height = "70px";
+    controlUI.appendChild(controlIcon);
+    // Setup the click event listeners
+    controlUI.addEventListener("click", function () {
+        $('#do-filter-modal').modal('show'); 
+    });
+}
+
 function initialize() {
     var locations = [
         ['DESCRIPTION', 41.926979, 12.517385, 3],
@@ -65,6 +108,15 @@ function initialize() {
         map.setZoom(3);
         google.maps.event.removeListener(listener);
     });
+
+    // Controls 
+    // Create the DIV to hold the control and call the LeftControl()  , RightControl()
+    // constructor passing in this DIV. 
+    var leftControlDiv = document.createElement("div");
+    var leftControl = new LeftControl(leftControlDiv, map);
+    var rightControlDiv = document.createElement("div");
+    var rightControl = new RightControl(rightControlDiv, map);
+    leftControlDiv.index = 1; rightControlDiv.index = 2; map.controls[google.maps.ControlPosition.TOP_LEFT].push(leftControlDiv); map.controls[google.maps.ControlPosition.TOP_RIGHT].push(rightControlDiv);
 }
 
 function loadScript() {

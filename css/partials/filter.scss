@@ -19,7 +19,6 @@
           width: 40%;
         }
         &:nth-child(2) {
-         
           width: 30%;
         }
         &:nth-child(3) {
@@ -79,6 +78,7 @@
   }
 }
 
+// Modal 
 .do-filter-modal {
   color: $grey;
   .modal-body {
@@ -116,8 +116,9 @@
   }
   &-filters {
     @include flex(initial, initial, initial, row, nowrap);
-    div {
-      margin: 1rem;
+    width: 100%;
+    .custom-control {
+      margin: 0 !important;
     }
   }
   &-range-wrap {
@@ -130,13 +131,6 @@
   }
 }
 
-@media (max-width: 1440px) {
-  .do-filter-modal-filters {
-    div {
-      margin: 1rem 0.5rem;
-    }
-  }
-}
 @media (max-width: 1024px) {
   .do-filter {
     .container {
@@ -173,14 +167,15 @@
 }
 
 @media (max-width: 768px) {
+  // Modal
   .do-filter-modal {
     &-title {
       @include text($size: 1.5rem);
     }
     &-filters {
       @include flex(center, center, center, row, wrap);
-      div {
-        margin: 1rem;
+      .custom-control {
+        margin: 0.5rem 0 !important;
       }
     }
     &-range-wrap {
@@ -196,6 +191,7 @@
 }
 
 @media (max-width: 425px) {
+  // Modal
   .do-filter-modal {
     .modal-body {
       padding: 1rem 2rem;
@@ -203,11 +199,6 @@
     &-title {
       img {
         width: 35px;
-      }
-    }
-    &-filters {
-      div {
-        margin: 1rem 0.5rem;
       }
     }
   }

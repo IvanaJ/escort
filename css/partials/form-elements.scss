@@ -52,11 +52,13 @@ form {
     // Radio & checkbox
     .custom-control {
       padding: 0;
+      width: 100%;
+      margin: 0 0.5rem;
 
       //    Radio buttons
       .custom-control-label {
         @include text(1rem, 2.375rem, 700);
-        width: 155px;
+        width: 100%;
         height: 50px;
         left: 0;
         padding: 0.3rem;
@@ -67,7 +69,7 @@ form {
         text-align: center;
 
         &:before {
-          width: 155px;
+          width: 100%;
           height: 50px;
           border-radius: 1.5625rem;
           left: 0;
@@ -251,15 +253,6 @@ form {
   }
 }
 
-@media (max-width: 1440px) {
-  form {
-    .form-group {
-      .custom-control {
-        padding: 0 0.2rem;
-      }
-    }
-  }
-}
 @media (max-width: 768px) {
   form {
     label {
