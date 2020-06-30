@@ -1,13 +1,39 @@
 // Register Page
 .do-register {
+    .row {
+        div {
+            &:first-child {
+                .form-group {
+                    float: right;
+                }
+            }
+        }
+    }
+
+    .form-group {
+        width: 50%;
+    }
     .do-conditions {
         font-weight: 300;
         font-style: italic;
         font-size: 1.0625rem;
         line-height: 2.375rem;
     }
+    .form-check {
+        float: right;
+        padding-left: 0;
+        width: 50%;
+    }
 }
 
+@media (max-width: 1024px) {
+    .do-register {
+        .form-group,
+        .form-check {
+            width: 100%;
+        }
+    }
+}
 @media (max-width: 768px) {
     // Register Page
     .do-register {

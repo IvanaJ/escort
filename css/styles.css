@@ -1518,13 +1518,30 @@ form .do-check .custom-checkbox .custom-control-input:checked ~ .custom-control-
     margin-bottom: unset;
   }
 }
+.do-register .row div:first-child .form-group {
+  float: right;
+}
+.do-register .form-group {
+  width: 50%;
+}
 .do-register .do-conditions {
   font-weight: 300;
   font-style: italic;
   font-size: 1.0625rem;
   line-height: 2.375rem;
 }
+.do-register .form-check {
+  float: right;
+  padding-left: 0;
+  width: 50%;
+}
 
+@media (max-width: 1024px) {
+  .do-register .form-group,
+.do-register .form-check {
+    width: 100%;
+  }
+}
 @media (max-width: 768px) {
   .do-register form .row:first-of-type, .do-register form .row:nth-of-type(2) {
     margin-bottom: 2.75rem;
@@ -1555,6 +1572,23 @@ form .do-check .custom-checkbox .custom-control-input:checked ~ .custom-control-
   font-size: 24px;
 }
 
+.do-payment .row div:first-child .form-group {
+  float: right;
+}
+.do-payment .form-group {
+  width: 50%;
+}
+
+@media (max-width: 1024px) {
+  .do-payment .form-group {
+    width: 100%;
+  }
+}
+@media (max-width: 425px) {
+  .do-payment form .form-group .custom-control {
+    margin: 0 !important;
+  }
+}
 html {
   overflow-x: hidden;
 }

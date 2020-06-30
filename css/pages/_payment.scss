@@ -1,0 +1,34 @@
+.do-payment {
+    .row {
+        div {
+            &:first-child {
+                .form-group {
+                    float: right;
+                }
+            }
+        }
+    }
+
+    .form-group {
+        width: 50%;
+    }
+}
+
+@media (max-width: 1024px) {
+    .do-payment {
+        .form-group {
+            width: 100%;
+        }
+    }
+}
+@media (max-width: 425px) {
+    .do-payment {
+        form {
+            .form-group {
+                .custom-control {
+                    margin: 0 !important;
+                }
+            }
+        }
+    }
+}
